@@ -14,6 +14,7 @@
 		786EBCF32410208900683FD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786EBCF12410208900683FD6 /* Main.storyboard */; };
 		786EBCF52410208B00683FD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786EBCF42410208B00683FD6 /* Assets.xcassets */; };
 		786EBCF82410208B00683FD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786EBCF62410208B00683FD6 /* LaunchScreen.storyboard */; };
+		78D9E325241027F300C7C8B5 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9E324241027F300C7C8B5 /* AppDIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		786EBCF42410208B00683FD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		786EBCF72410208B00683FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		786EBCF92410208B00683FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78D9E324241027F300C7C8B5 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		BAFC9D12ACDF81637DE52825 /* Pods_starwars_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_starwars_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6264D162DFA5B971ACAC3F8 /* Pods-starwars-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starwars-app.release.xcconfig"; path = "Target Support Files/Pods-starwars-app/Pods-starwars-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +157,7 @@
 		788E4CDF2410235D00B7551C /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				78D9E324241027F300C7C8B5 /* AppDIContainer.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D9E325241027F300C7C8B5 /* AppDIContainer.swift in Sources */,
 				786EBCF02410208900683FD6 /* ViewController.swift in Sources */,
 				786EBCEC2410208900683FD6 /* AppDelegate.swift in Sources */,
 				786EBCEE2410208900683FD6 /* SceneDelegate.swift in Sources */,
