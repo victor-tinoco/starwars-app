@@ -80,6 +80,11 @@
 		786EBCEA2410208900683FD6 /* starwars-app */ = {
 			isa = PBXGroup;
 			children = (
+				788E4CD9241022F500B7551C /* Application */,
+				788E4CDD2410232600B7551C /* Presentation */,
+				788E4CDA241022FE00B7551C /* Data */,
+				788E4CDB2410230B00B7551C /* Domain */,
+				788E4CDC2410231900B7551C /* Infrastructure */,
 				786EBCEF2410208900683FD6 /* ViewController.swift */,
 				786EBCF12410208900683FD6 /* Main.storyboard */,
 				788E4CD62410216E00B7551C /* Resources */,
@@ -97,6 +102,89 @@
 				786EBCF92410208B00683FD6 /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		788E4CD9241022F500B7551C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				788E4CDE2410235500B7551C /* Scenes */,
+				788E4CDF2410235D00B7551C /* DI */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		788E4CDA241022FE00B7551C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		788E4CDB2410230B00B7551C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				788E4CE12410238200B7551C /* Entities */,
+				788E4CE22410238600B7551C /* UseCase */,
+				788E4CE32410239000B7551C /* Repositories */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		788E4CDC2410231900B7551C /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				788E4CE4241023A100B7551C /* Services */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		788E4CDD2410232600B7551C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		788E4CDE2410235500B7551C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		788E4CDF2410235D00B7551C /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		788E4CE12410238200B7551C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		788E4CE22410238600B7551C /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		788E4CE32410239000B7551C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		788E4CE4241023A100B7551C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
