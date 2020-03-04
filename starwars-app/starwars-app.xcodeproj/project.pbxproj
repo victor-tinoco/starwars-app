@@ -15,6 +15,9 @@
 		786EBCF52410208B00683FD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786EBCF42410208B00683FD6 /* Assets.xcassets */; };
 		786EBCF82410208B00683FD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786EBCF62410208B00683FD6 /* LaunchScreen.storyboard */; };
 		78D9E325241027F300C7C8B5 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9E324241027F300C7C8B5 /* AppDIContainer.swift */; };
+		78D9E32924102B2000C7C8B5 /* BaseAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9E32824102B2000C7C8B5 /* BaseAPIResponse.swift */; };
+		78D9E32B24102B3900C7C8B5 /* PeopleAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9E32A24102B3900C7C8B5 /* PeopleAPIResponse.swift */; };
+		78D9E32D24102B4800C7C8B5 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9E32C24102B4800C7C8B5 /* People.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		786EBCF72410208B00683FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		786EBCF92410208B00683FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78D9E324241027F300C7C8B5 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		78D9E32824102B2000C7C8B5 /* BaseAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIResponse.swift; sourceTree = "<group>"; };
+		78D9E32A24102B3900C7C8B5 /* PeopleAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleAPIResponse.swift; sourceTree = "<group>"; };
+		78D9E32C24102B4800C7C8B5 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		BAFC9D12ACDF81637DE52825 /* Pods_starwars_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_starwars_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6264D162DFA5B971ACAC3F8 /* Pods-starwars-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starwars-app.release.xcconfig"; path = "Target Support Files/Pods-starwars-app/Pods-starwars-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,8 +90,8 @@
 			children = (
 				788E4CD9241022F500B7551C /* Application */,
 				788E4CDD2410232600B7551C /* Presentation */,
-				788E4CDA241022FE00B7551C /* Data */,
 				788E4CDB2410230B00B7551C /* Domain */,
+				788E4CDA241022FE00B7551C /* Data */,
 				788E4CDC2410231900B7551C /* Infrastructure */,
 				786EBCEF2410208900683FD6 /* ViewController.swift */,
 				786EBCF12410208900683FD6 /* Main.storyboard */,
@@ -118,6 +124,8 @@
 		788E4CDA241022FE00B7551C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				78D9E32724102A4C00C7C8B5 /* RemoteStorage */,
+				78D9E32624102A3E00C7C8B5 /* RepositoryImpl */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -165,6 +173,7 @@
 		788E4CE12410238200B7551C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				78D9E32C24102B4800C7C8B5 /* People.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -188,6 +197,22 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		78D9E32624102A3E00C7C8B5 /* RepositoryImpl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RepositoryImpl;
+			sourceTree = "<group>";
+		};
+		78D9E32724102A4C00C7C8B5 /* RemoteStorage */ = {
+			isa = PBXGroup;
+			children = (
+				78D9E32824102B2000C7C8B5 /* BaseAPIResponse.swift */,
+				78D9E32A24102B3900C7C8B5 /* PeopleAPIResponse.swift */,
+			);
+			path = RemoteStorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,10 +330,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D9E32924102B2000C7C8B5 /* BaseAPIResponse.swift in Sources */,
 				78D9E325241027F300C7C8B5 /* AppDIContainer.swift in Sources */,
+				78D9E32B24102B3900C7C8B5 /* PeopleAPIResponse.swift in Sources */,
 				786EBCF02410208900683FD6 /* ViewController.swift in Sources */,
 				786EBCEC2410208900683FD6 /* AppDelegate.swift in Sources */,
 				786EBCEE2410208900683FD6 /* SceneDelegate.swift in Sources */,
+				78D9E32D24102B4800C7C8B5 /* People.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +484,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5FW3LWY33Q;
 				INFOPLIST_FILE = "starwars-app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,6 +504,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5FW3LWY33Q;
 				INFOPLIST_FILE = "starwars-app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
