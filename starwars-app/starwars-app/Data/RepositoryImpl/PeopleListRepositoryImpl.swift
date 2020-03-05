@@ -14,7 +14,7 @@ class PeopleListRepositoryImpl: PeopleListRepository {
     
     var peopleService = PeopleService()
     
-    func getPeopleList() -> Single<[People]> {
+    func getPeopleList(people: [People]) -> Single<[People]> {
         let list: Single<BaseAPIResponse> = peopleService.getDecodedResponse()
         return list.map { (uncleanPeople) in
             return uncleanPeople.mapToPeople()

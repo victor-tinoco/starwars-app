@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol PeopleListRepository: class {
-    func getPeopleList()-> Single<[People]>
+    func getPeopleList(people: [People])-> Single<[People]>
 }

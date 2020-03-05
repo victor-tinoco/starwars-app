@@ -13,11 +13,15 @@ class PeopleListUseCase {
     
     var peopleListRepo: PeopleListRepository
     
+    var peopleResponse: [People] = []
+    
     init(peopleListRepo: PeopleListRepository) {
         self.peopleListRepo = peopleListRepo
     }
     
     func getPeopleList() -> Single<[People]> {
-       return peopleListRepo.getPeopleList()
+        let filtered = peopleResponse.filter { $0.name == "Luke Skywalker"
+        }
+        return peopleListRepo.getPeopleList(people: filtered)
     }
 }
