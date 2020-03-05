@@ -19,9 +19,13 @@ class PeopleListUseCase {
         self.peopleListRepo = peopleListRepo
     }
     
-    func getPeopleList() -> Single<[People]> {
-        let filtered = peopleResponse.filter { $0.name == "Luke Skywalker"
-        }
+    func getLightSidePeopleList() -> Single<[People]> {
+        let filtered = peopleResponse.filter { $0.faction.contains("RESISTENCE") }
+        return peopleListRepo.getPeopleList(people: filtered)
+    }
+    
+    func getDarkSidePeopleList() -> Single<[People]> {
+        let filtered = peopleResponse.filter { $0.faction == "EMPIRE" }
         return peopleListRepo.getPeopleList(people: filtered)
     }
 }

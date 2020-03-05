@@ -15,9 +15,9 @@
 		5A7C554B241146E000B96D5F /* PeopleListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C554A241146E000B96D5F /* PeopleListUseCase.swift */; };
 		5A7C554F24115EFC00B96D5F /* PeopleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C554E24115EFC00B96D5F /* PeopleListViewController.swift */; };
 		5A7C555124115F0C00B96D5F /* PeopleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C555024115F0C00B96D5F /* PeopleListViewModel.swift */; };
+		5A7C5553241174FB00B96D5F /* PeopleListDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C5552241174FB00B96D5F /* PeopleListDIContainer.swift */; };
 		6A3C3742241029E40019DB7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C3741241029E40019DB7F /* GoogleService-Info.plist */; };
 		786EBCEC2410208900683FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EBCEB2410208900683FD6 /* AppDelegate.swift */; };
-		786EBCEE2410208900683FD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EBCED2410208900683FD6 /* SceneDelegate.swift */; };
 		786EBCF02410208900683FD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EBCEF2410208900683FD6 /* ViewController.swift */; };
 		786EBCF32410208900683FD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786EBCF12410208900683FD6 /* Main.storyboard */; };
 		786EBCF52410208B00683FD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786EBCF42410208B00683FD6 /* Assets.xcassets */; };
@@ -36,12 +36,12 @@
 		5A7C554A241146E000B96D5F /* PeopleListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListUseCase.swift; sourceTree = "<group>"; };
 		5A7C554E24115EFC00B96D5F /* PeopleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewController.swift; sourceTree = "<group>"; };
 		5A7C555024115F0C00B96D5F /* PeopleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewModel.swift; sourceTree = "<group>"; };
+		5A7C5552241174FB00B96D5F /* PeopleListDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PeopleListDIContainer.swift; path = "starwars-app/Presentation/PeopleList/PeopleListDIContainer.swift"; sourceTree = SOURCE_ROOT; };
 		6812943FCE8E56AFC21EDDA7 /* Pods-starwars-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starwars-app.debug.xcconfig"; path = "Target Support Files/Pods-starwars-app/Pods-starwars-app.debug.xcconfig"; sourceTree = "<group>"; };
 		6A3C3741241029E40019DB7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A3C3743241033160019DB7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		786EBCE82410208900683FD6 /* starwars-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "starwars-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		786EBCEB2410208900683FD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		786EBCED2410208900683FD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		786EBCEF2410208900683FD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		786EBCF22410208900683FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		786EBCF42410208B00683FD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				786EBCEB2410208900683FD6 /* AppDelegate.swift */,
-				786EBCED2410208900683FD6 /* SceneDelegate.swift */,
 				786EBCF42410208B00683FD6 /* Assets.xcassets */,
 				786EBCF62410208B00683FD6 /* LaunchScreen.storyboard */,
 				786EBCF92410208B00683FD6 /* Info.plist */,
@@ -187,6 +186,7 @@
 		788E4CDE2410235500B7551C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5A7C5552241174FB00B96D5F /* PeopleListDIContainer.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -376,9 +376,9 @@
 				786EBCEC2410208900683FD6 /* AppDelegate.swift in Sources */,
 				5A7C55472411420A00B96D5F /* PeopleListRepository.swift in Sources */,
 				5A7C554B241146E000B96D5F /* PeopleListUseCase.swift in Sources */,
-				786EBCEE2410208900683FD6 /* SceneDelegate.swift in Sources */,
 				78D9E32D24102B4800C7C8B5 /* People.swift in Sources */,
 				5A7C55452411414700B96D5F /* PeopleService.swift in Sources */,
+				5A7C5553241174FB00B96D5F /* PeopleListDIContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

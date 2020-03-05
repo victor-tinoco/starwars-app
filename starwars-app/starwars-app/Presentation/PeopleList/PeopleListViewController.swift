@@ -7,24 +7,38 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class PeopleListViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var tableView: UITableView!
+    
+    var viewModel: PeopleListViewModelProtocol!
+    var disposeBag = DisposeBag()
+    
+    public class func create(viewModel: PeopleListViewModel) -> PeopleListViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let view = storyboard.instantiateViewController(withIdentifier: "PeopleListViewController") as! PeopleListViewController
+        view.viewModel = viewModel
+        return view
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel.showLightSidePeopleList()
+        
+        bind()
     }
-    */
 
+    private func bind() {
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        viewModel.peopleList.map { $0 ?? [] }.drive(tableView.rx.items(cellIdentifier: "cell")) { index, model, cell in
+            
+            cell.textLabel?.text = model.name
+        }.disposed(by: disposeBag)
+    }
+    
+    @IBAction func lightSideButton(_ sender: Any) {
+        
+    }
 }

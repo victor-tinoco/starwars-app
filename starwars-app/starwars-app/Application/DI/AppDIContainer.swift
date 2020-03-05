@@ -9,5 +9,12 @@
 import UIKit
 
 class AppDIContainer {
+    func showPeopleListViewController() -> PeopleListViewController {
+        return makePeopleListDI.makePeopleListViewController()
+    }
+ 
     
+    var makePeopleListDI: PeopleListDIContainer {
+        return PeopleListDIContainer()
+    }
 }
