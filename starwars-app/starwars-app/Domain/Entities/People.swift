@@ -17,4 +17,5 @@ struct People: Codable {
     let eye_color: String
     let birth_year: String
     let gender: String
+    let faction: String
 }

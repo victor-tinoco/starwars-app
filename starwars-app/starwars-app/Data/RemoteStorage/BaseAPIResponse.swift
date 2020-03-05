@@ -23,7 +23,8 @@ extension BaseAPIResponse {
                                      skin_color: people.skin_color,
                                      eye_color: people.eye_color,
                                      birth_year: people.birth_year,
-                                     gender: people.gender))
+                                     gender: people.gender,
+                                     faction: people.faction))
         }
         return peopleList
     }
