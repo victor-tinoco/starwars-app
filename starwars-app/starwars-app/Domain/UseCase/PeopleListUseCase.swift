@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import RxSwift
+
+class PeopleListUseCase {
+    
+    var peopleListRepo: PeopleListRepository
+    
+    init(peopleListRepo: PeopleListRepository) {
+        self.peopleListRepo = peopleListRepo
+    }
+    
+    func getPeopleList() -> Single<[People]> {
+       return peopleListRepo.getPeopleList()
+    }
+}
