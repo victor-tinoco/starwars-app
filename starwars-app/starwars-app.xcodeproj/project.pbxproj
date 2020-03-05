@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2043194E531ABF3833E1256D /* Pods_starwars_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC9D12ACDF81637DE52825 /* Pods_starwars_app.framework */; };
+		5F25AB982411419200F9ED08 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25AB972411419200F9ED08 /* SignUpService.swift */; };
+		5F25AB9A24115D8800F9ED08 /* SingUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25AB9924115D8800F9ED08 /* SingUpRepository.swift */; };
+		5F25AB9C24115E2500F9ED08 /* SignUpRepositorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25AB9B24115E2500F9ED08 /* SignUpRepositorImpl.swift */; };
+		5F8C140F241161AF0089D1BB /* SingUpUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8C140E241161AF0089D1BB /* SingUpUseCase.swift */; };
+		5F8C1411241162A30089D1BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F8C1410241162A30089D1BB /* GoogleService-Info.plist */; };
+		5FEE48F7241165C5004C6CF0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE48F6241165C5004C6CF0 /* SignUpViewController.swift */; };
+		5FEE48F9241165D0004C6CF0 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE48F8241165D0004C6CF0 /* SignUpViewModel.swift */; };
+		5FEE48FB24116D9D004C6CF0 /* SignUpDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE48FA24116D9D004C6CF0 /* SignUpDIContainer.swift */; };
 		786EBCEC2410208900683FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EBCEB2410208900683FD6 /* AppDelegate.swift */; };
 		786EBCEE2410208900683FD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EBCED2410208900683FD6 /* SceneDelegate.swift */; };
 		786EBCF02410208900683FD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EBCEF2410208900683FD6 /* ViewController.swift */; };
@@ -21,6 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F25AB972411419200F9ED08 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
+		5F25AB9924115D8800F9ED08 /* SingUpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingUpRepository.swift; path = "starwars-app/Domain/Repositories/SingUpRepository.swift"; sourceTree = SOURCE_ROOT; };
+		5F25AB9B24115E2500F9ED08 /* SignUpRepositorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpRepositorImpl.swift; path = "starwars-app/Data/RepositoryImpl/SignUpRepositorImpl.swift"; sourceTree = SOURCE_ROOT; };
+		5F8C140E241161AF0089D1BB /* SingUpUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingUpUseCase.swift; sourceTree = "<group>"; };
+		5F8C1410241162A30089D1BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5FEE48F6241165C5004C6CF0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = "starwars-app/Data/RepositoryImpl/SignUpViewController.swift"; sourceTree = SOURCE_ROOT; };
+		5FEE48F8241165D0004C6CF0 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewModel.swift; path = "starwars-app/Data/RepositoryImpl/SignUpViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		5FEE48FA24116D9D004C6CF0 /* SignUpDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpDIContainer.swift; path = "starwars-app/Data/RepositoryImpl/SignUpDIContainer.swift"; sourceTree = SOURCE_ROOT; };
 		6812943FCE8E56AFC21EDDA7 /* Pods-starwars-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starwars-app.debug.xcconfig"; path = "Target Support Files/Pods-starwars-app/Pods-starwars-app.debug.xcconfig"; sourceTree = "<group>"; };
 		786EBCE82410208900683FD6 /* starwars-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "starwars-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		786EBCEB2410208900683FD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +119,7 @@
 		788E4CD62410216E00B7551C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5F8C1410241162A30089D1BB /* GoogleService-Info.plist */,
 				786EBCEB2410208900683FD6 /* AppDelegate.swift */,
 				786EBCED2410208900683FD6 /* SceneDelegate.swift */,
 				786EBCF42410208B00683FD6 /* Assets.xcassets */,
@@ -151,6 +168,8 @@
 		788E4CDD2410232600B7551C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5FEE48F6241165C5004C6CF0 /* SignUpViewController.swift */,
+				5FEE48F8241165D0004C6CF0 /* SignUpViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -158,6 +177,7 @@
 		788E4CDE2410235500B7551C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5FEE48FA24116D9D004C6CF0 /* SignUpDIContainer.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -181,6 +201,7 @@
 		788E4CE22410238600B7551C /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				5F8C140E241161AF0089D1BB /* SingUpUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -188,6 +209,7 @@
 		788E4CE32410239000B7551C /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				5F25AB9924115D8800F9ED08 /* SingUpRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -195,6 +217,7 @@
 		788E4CE4241023A100B7551C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5F25AB972411419200F9ED08 /* SignUpService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -202,6 +225,7 @@
 		78D9E32624102A3E00C7C8B5 /* RepositoryImpl */ = {
 			isa = PBXGroup;
 			children = (
+				5F25AB9B24115E2500F9ED08 /* SignUpRepositorImpl.swift */,
 			);
 			path = RepositoryImpl;
 			sourceTree = "<group>";
@@ -276,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				786EBCF82410208B00683FD6 /* LaunchScreen.storyboard in Resources */,
+				5F8C1411241162A30089D1BB /* GoogleService-Info.plist in Resources */,
 				786EBCF52410208B00683FD6 /* Assets.xcassets in Resources */,
 				786EBCF32410208900683FD6 /* Main.storyboard in Resources */,
 			);
@@ -332,11 +357,18 @@
 			files = (
 				78D9E32924102B2000C7C8B5 /* BaseAPIResponse.swift in Sources */,
 				78D9E325241027F300C7C8B5 /* AppDIContainer.swift in Sources */,
+				5F25AB9A24115D8800F9ED08 /* SingUpRepository.swift in Sources */,
 				78D9E32B24102B3900C7C8B5 /* PeopleAPIResponse.swift in Sources */,
 				786EBCF02410208900683FD6 /* ViewController.swift in Sources */,
+				5F25AB9C24115E2500F9ED08 /* SignUpRepositorImpl.swift in Sources */,
+				5FEE48FB24116D9D004C6CF0 /* SignUpDIContainer.swift in Sources */,
 				786EBCEC2410208900683FD6 /* AppDelegate.swift in Sources */,
+				5F25AB982411419200F9ED08 /* SignUpService.swift in Sources */,
+				5F8C140F241161AF0089D1BB /* SingUpUseCase.swift in Sources */,
 				786EBCEE2410208900683FD6 /* SceneDelegate.swift in Sources */,
+				5FEE48F7241165C5004C6CF0 /* SignUpViewController.swift in Sources */,
 				78D9E32D24102B4800C7C8B5 /* People.swift in Sources */,
+				5FEE48F9241165D0004C6CF0 /* SignUpViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
