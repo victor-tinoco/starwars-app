@@ -13,7 +13,6 @@ import RxSwift
 protocol SignUpContract {
     var  finishRegister: Driver<Bool?> {get}
     func makeRegister(email: String, password: String)
-    
 }
 
 class SignUpViewModel: SignUpContract {
