@@ -13,5 +13,14 @@ import RxCocoa
 public class LoginUseCase {
     let loginRepo: LoginRepository
     
+    init(loginRepository: LoginRepository) {
+        self.loginRepo = loginRepository
+    }
     
+    public func goLogin(email: String, password: String) -> Single<Bool> {
+        return loginRepo.getLogin(email: email, password: password)
+        
+        }
+        
+        
 }
