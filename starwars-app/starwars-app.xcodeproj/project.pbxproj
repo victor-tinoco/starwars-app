@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2043194E531ABF3833E1256D /* Pods_starwars_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC9D12ACDF81637DE52825 /* Pods_starwars_app.framework */; };
 		5A7C5543241140AD00B96D5F /* MoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C5542241140AD00B96D5F /* MoyaService.swift */; };
+		5A7C55452411414700B96D5F /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C55442411414700B96D5F /* PeopleService.swift */; };
 		6A3C3742241029E40019DB7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C3741241029E40019DB7F /* GoogleService-Info.plist */; };
 		786EBCEC2410208900683FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EBCEB2410208900683FD6 /* AppDelegate.swift */; };
 		786EBCEE2410208900683FD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EBCED2410208900683FD6 /* SceneDelegate.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		5A7C5542241140AD00B96D5F /* MoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaService.swift; sourceTree = "<group>"; };
+		5A7C55442411414700B96D5F /* PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 		6812943FCE8E56AFC21EDDA7 /* Pods-starwars-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starwars-app.debug.xcconfig"; path = "Target Support Files/Pods-starwars-app/Pods-starwars-app.debug.xcconfig"; sourceTree = "<group>"; };
 		6A3C3741241029E40019DB7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A3C3743241033160019DB7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				5A7C5542241140AD00B96D5F /* MoyaService.swift */,
+				5A7C55442411414700B96D5F /* PeopleService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				786EBCEC2410208900683FD6 /* AppDelegate.swift in Sources */,
 				786EBCEE2410208900683FD6 /* SceneDelegate.swift in Sources */,
 				78D9E32D24102B4800C7C8B5 /* People.swift in Sources */,
+				5A7C55452411414700B96D5F /* PeopleService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
