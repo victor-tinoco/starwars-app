@@ -10,6 +10,9 @@
 		2043194E531ABF3833E1256D /* Pods_starwars_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC9D12ACDF81637DE52825 /* Pods_starwars_app.framework */; };
 		5A7C5543241140AD00B96D5F /* MoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C5542241140AD00B96D5F /* MoyaService.swift */; };
 		5A7C55452411414700B96D5F /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C55442411414700B96D5F /* PeopleService.swift */; };
+		5A7C55472411420A00B96D5F /* PeopleListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C55462411420A00B96D5F /* PeopleListRepository.swift */; };
+		5A7C55492411428300B96D5F /* PeopleListRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C55482411428300B96D5F /* PeopleListRepositoryImpl.swift */; };
+		5A7C554B241146E000B96D5F /* PeopleListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C554A241146E000B96D5F /* PeopleListUseCase.swift */; };
 		6A3C3742241029E40019DB7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C3741241029E40019DB7F /* GoogleService-Info.plist */; };
 		786EBCEC2410208900683FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EBCEB2410208900683FD6 /* AppDelegate.swift */; };
 		786EBCEE2410208900683FD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EBCED2410208900683FD6 /* SceneDelegate.swift */; };
@@ -26,6 +29,9 @@
 /* Begin PBXFileReference section */
 		5A7C5542241140AD00B96D5F /* MoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaService.swift; sourceTree = "<group>"; };
 		5A7C55442411414700B96D5F /* PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
+		5A7C55462411420A00B96D5F /* PeopleListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PeopleListRepository.swift; path = "starwars-app/Domain/Repositories/PeopleListRepository.swift"; sourceTree = SOURCE_ROOT; };
+		5A7C55482411428300B96D5F /* PeopleListRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PeopleListRepositoryImpl.swift; path = "starwars-app/Data/RepositoryImpl/PeopleListRepositoryImpl.swift"; sourceTree = SOURCE_ROOT; };
+		5A7C554A241146E000B96D5F /* PeopleListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListUseCase.swift; sourceTree = "<group>"; };
 		6812943FCE8E56AFC21EDDA7 /* Pods-starwars-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starwars-app.debug.xcconfig"; path = "Target Support Files/Pods-starwars-app/Pods-starwars-app.debug.xcconfig"; sourceTree = "<group>"; };
 		6A3C3741241029E40019DB7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A3C3743241033160019DB7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -190,6 +196,7 @@
 		788E4CE22410238600B7551C /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				5A7C554A241146E000B96D5F /* PeopleListUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -197,6 +204,7 @@
 		788E4CE32410239000B7551C /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				5A7C55462411420A00B96D5F /* PeopleListRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -213,6 +221,7 @@
 		78D9E32624102A3E00C7C8B5 /* RepositoryImpl */ = {
 			isa = PBXGroup;
 			children = (
+				5A7C55482411428300B96D5F /* PeopleListRepositoryImpl.swift */,
 			);
 			path = RepositoryImpl;
 			sourceTree = "<group>";
@@ -344,10 +353,13 @@
 			files = (
 				78D9E32924102B2000C7C8B5 /* BaseAPIResponse.swift in Sources */,
 				78D9E325241027F300C7C8B5 /* AppDIContainer.swift in Sources */,
+				5A7C55492411428300B96D5F /* PeopleListRepositoryImpl.swift in Sources */,
 				78D9E32B24102B3900C7C8B5 /* PeopleAPIResponse.swift in Sources */,
 				5A7C5543241140AD00B96D5F /* MoyaService.swift in Sources */,
 				786EBCF02410208900683FD6 /* ViewController.swift in Sources */,
 				786EBCEC2410208900683FD6 /* AppDelegate.swift in Sources */,
+				5A7C55472411420A00B96D5F /* PeopleListRepository.swift in Sources */,
+				5A7C554B241146E000B96D5F /* PeopleListUseCase.swift in Sources */,
 				786EBCEE2410208900683FD6 /* SceneDelegate.swift in Sources */,
 				78D9E32D24102B4800C7C8B5 /* People.swift in Sources */,
 				5A7C55452411414700B96D5F /* PeopleService.swift in Sources */,
