@@ -9,5 +9,12 @@
 import UIKit
 
 class AppDIContainer {
+ 
+    let signUpDI = SignUpDIContainer()
     
+    
+    func callSignUp() -> SignUpViewController {
+        return signUpDI.makePeopleListViewController(appDI: self)
+    }
+
 }

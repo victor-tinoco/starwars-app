@@ -11,5 +11,20 @@ import UIKit
 
 class SignUpDIContainer{
     
+    var signUpImpl: SignUpRepositorImpl {
+        return SignUpRepositorImpl()
+    }
+    
+    var signUpUseCase:SignUpUseCase{
+        return SignUpUseCase(signUpImpl: signUpImpl)
+    }
+    
+    var vm: SignUpViewModel{
+        return SignUpViewModel(registerUseCase: signUpUseCase)
+    }
+    
+    func makePeopleListViewController(appDI: AppDIContainer) -> SignUpViewController {
+        return SignUpViewController.instantiate(viewModel: vm)
+     }
     
 }
