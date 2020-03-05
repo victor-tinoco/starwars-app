@@ -21,4 +21,5 @@ struct PeopleAPIReponse: Codable {
     let gender: String
     let homeworld: String
     let films: [String]
+    let faction: String
 }
