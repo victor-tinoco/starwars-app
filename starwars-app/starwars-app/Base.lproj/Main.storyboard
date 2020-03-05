@@ -37,9 +37,16 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uux-84-Y9d">
                                 <rect key="frame" x="184" y="44" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Luz"/>
                                 <connections>
                                     <action selector="lightSideButton:" destination="OMV-gX-Zsz" eventType="touchUpInside" id="kyN-fJ-r2i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uub-dD-NXn">
+                                <rect key="frame" x="304" y="44" width="68" height="30"/>
+                                <state key="normal" title="Escuridão"/>
+                                <connections>
+                                    <action selector="darkSideButton:" destination="OMV-gX-Zsz" eventType="touchUpInside" id="pDI-Yd-Ez1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,6 +54,8 @@
                         <constraints>
                             <constraint firstItem="Uux-84-Y9d" firstAttribute="leading" secondItem="DKz-fr-S1u" secondAttribute="leading" constant="184" id="I8M-7Q-SPg"/>
                             <constraint firstItem="Uux-84-Y9d" firstAttribute="top" secondItem="DKz-fr-S1u" secondAttribute="top" id="KJw-AP-onP"/>
+                            <constraint firstItem="DKz-fr-S1u" firstAttribute="trailing" secondItem="uub-dD-NXn" secondAttribute="trailing" constant="42" id="O8V-h0-YzB"/>
+                            <constraint firstItem="uub-dD-NXn" firstAttribute="top" secondItem="DKz-fr-S1u" secondAttribute="top" id="SMM-41-kAR"/>
                             <constraint firstItem="DKz-fr-S1u" firstAttribute="trailing" secondItem="Uux-84-Y9d" secondAttribute="trailing" constant="184" id="a1m-VH-N3q"/>
                             <constraint firstItem="aQR-6h-sDG" firstAttribute="leading" secondItem="DKz-fr-S1u" secondAttribute="leading" id="aLl-ba-Ica"/>
                             <constraint firstItem="aQR-6h-sDG" firstAttribute="top" secondItem="YR3-Qa-M6u" secondAttribute="top" constant="100" id="g4C-pL-fG6"/>

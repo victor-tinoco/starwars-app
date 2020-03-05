@@ -25,7 +25,6 @@ class PeopleListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.showLightSidePeopleList()
         
         bind()
     }
@@ -39,6 +38,12 @@ class PeopleListViewController: UIViewController {
     }
     
     @IBAction func lightSideButton(_ sender: Any) {
-        
+        viewModel.showLightSidePeopleList()
+        tableView.reloadData()
+    }
+    
+    @IBAction func darkSideButton(_ sender: Any) {
+        viewModel.showDarkSidePeopleList()
+        tableView.reloadData()
     }
 }

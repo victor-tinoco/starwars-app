@@ -13,6 +13,7 @@ import RxCocoa
 protocol PeopleListViewModelProtocol: class {
     var peopleList: Driver<[People]?> { get }
     func showLightSidePeopleList()
+    func showDarkSidePeopleList()
 }
 
 class PeopleListViewModel: PeopleListViewModelProtocol {
@@ -34,5 +35,9 @@ class PeopleListViewModel: PeopleListViewModelProtocol {
             }).disposed(by: disposeBag)
     }
     
-    
+    func showDarkSidePeopleList() {
+        peopleListUseCase.getLightSidePeopleList().subscribe(onSuccess: { (peopleList) in
+            self.peopleListRelay.accept(peopleList)
+        }).disposed(by: disposeBag)
+    }
 }
