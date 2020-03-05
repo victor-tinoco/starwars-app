@@ -14,6 +14,7 @@
 		6A366B9024113AA200B86105 /* LoginRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A366B8F24113AA200B86105 /* LoginRepositoryImpl.swift */; };
 		6A366B9224113DD200B86105 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A366B9124113DD200B86105 /* LoginUseCase.swift */; };
 		6A366B962411416D00B86105 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A366B952411416D00B86105 /* LoginViewModel.swift */; };
+		6A366B982411652C00B86105 /* StarWarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A366B972411652C00B86105 /* StarWarsViewController.swift */; };
 		6A3C3742241029E40019DB7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C3741241029E40019DB7F /* GoogleService-Info.plist */; };
 		786EBCEC2410208900683FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EBCEB2410208900683FD6 /* AppDelegate.swift */; };
 		786EBCEE2410208900683FD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EBCED2410208900683FD6 /* SceneDelegate.swift */; };
@@ -35,6 +36,7 @@
 		6A366B8F24113AA200B86105 /* LoginRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRepositoryImpl.swift; path = "starwars-app/LoginRepositoryImpl.swift"; sourceTree = SOURCE_ROOT; };
 		6A366B9124113DD200B86105 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginUseCase.swift; path = "starwars-app/LoginUseCase.swift"; sourceTree = SOURCE_ROOT; };
 		6A366B952411416D00B86105 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		6A366B972411652C00B86105 /* StarWarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsViewController.swift; sourceTree = "<group>"; };
 		6A3C3741241029E40019DB7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A3C3743241033160019DB7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		786EBCE82410208900683FD6 /* starwars-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "starwars-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				6A366B8924112ED500B86105 /* LoginViewController.swift */,
+				6A366B972411652C00B86105 /* StarWarsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				78D9E32924102B2000C7C8B5 /* BaseAPIResponse.swift in Sources */,
 				78D9E325241027F300C7C8B5 /* AppDIContainer.swift in Sources */,
 				78D9E32B24102B3900C7C8B5 /* PeopleAPIResponse.swift in Sources */,
+				6A366B982411652C00B86105 /* StarWarsViewController.swift in Sources */,
 				786EBCF02410208900683FD6 /* ViewController.swift in Sources */,
 				6A366B9024113AA200B86105 /* LoginRepositoryImpl.swift in Sources */,
 				6A366B8C2411317100B86105 /* LoginService.swift in Sources */,

@@ -12,19 +12,20 @@ import RxSwift
 import RxCocoa
 
 class LoginService {
-func logar(email: String, password: String) -> Single<Bool> {
-      
-    return Single.create { single in
-        Auth.auth().signIn(withEmail: email, password: password, completion:{ user, error in
-              if let firebaseError = error{
-                single(.success(false))
-              }else {
-                single(.success(true))
-            }
-
-              print("Usuário logado")
-
-          })
+    func makeLogin(email: String, password: String) -> Single<Bool> {
+        return Single.create { single in
+            Auth.auth().signIn(withEmail: email, password: password, completion:{ user, error in
+   
+                if error != nil{
+                    single(.success(false))
+                    print ("erro")
+                    
+                }else {
+                    single(.success(true))
+                    print("Usuário logado")
+                }
+                
+            })
         return Disposables.create()
     }
   

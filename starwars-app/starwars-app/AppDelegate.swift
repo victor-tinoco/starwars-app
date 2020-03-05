@@ -11,6 +11,8 @@ import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    let appDI = AppDIContainer()
 
     var window: UIWindow?
 
@@ -18,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let vc = appDI.makeHomeViewController()
+        window?.rootViewController = vc
+        window?.makeKeyAndVisible()
         
         return true
     }

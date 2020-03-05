@@ -10,4 +10,25 @@ import UIKit
 
 class AppDIContainer {
     
+    var window: UIWindow?
+        
+        
+  public func makeHomeViewController() -> LoginViewController {
+    return LoginViewController.create(delegate: self, viewModel: LoginViewModel(usecase: LoginUseCase(loginRepository: LoginRepositoryImpl())))
+            
+        }
+        
+    }
+
+extension AppDIContainer: LoginViewControllerDelegate {
+    func didTouchButtonLogin() -> UIViewController {
+        let loginRepository = LoginRepositoryImpl()
+        let usecase = LoginUseCase(loginRepository: loginRepository)
+        let vm = StarWarsViewController()
+        let vc = StarWarsViewController.instantiate()
+        
+        return vc
+    }
+    
+    
 }

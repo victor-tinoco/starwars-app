@@ -15,7 +15,7 @@ public class LoginRepositoryImpl: LoginRepository {
     var loginService = LoginService()
     func getLogin(email: String, password: String) -> Single<Bool> {
         
-        return loginService.logar(email: email, password: password)
+        return loginService.makeLogin(email: email, password: password)
     }
     
     
