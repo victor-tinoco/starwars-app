@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import RxSwift
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
@@ -17,19 +18,20 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     var delegate: LoginViewControllerDelegate?
+    var viewModel: LoginViewModelContract!
+    var dispose = DisposeBag()
     
-    var viewModel: LoginViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-    
+        
+        
     }
     
     public class func create(delegate: LoginViewControllerDelegate, viewModel: LoginViewModel) -> LoginViewController {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "LoginViewController", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         view.delegate = delegate
         view.viewModel = viewModel
@@ -39,29 +41,29 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButton(_ sender: Any) {
-        viewModel.login.drive(onNext: { (login) in
-            <#code#>
-        })
-        if let email = emailTextField.text, let password = passwordTextField.text, !password.isEmpty, !email.isEmpty
-          
-        {
+        
+        if let email = emailTextField.text, let password = passwordTextField.text, !password.isEmpty, !email.isEmpty {
             
-            viewModel.goLogin(email: email, password: password)
-           
+            self.viewModel.login.drive(onNext: { (login) in
+                if login == true {
+                    self.viewModel.goLogin(email: email, password: password)
+                    let vc = self.delegate?.didTouchButtonLogin()
+                    vc?.modalPresentationStyle = .fullScreen
+                    self.present(vc!, animated: true, completion: nil)
+                }else{
+                    self.viewModel.goLogin(email: email, password: password)
+                }
+                
+                }).disposed(by: dispose)
             
-            let vc = self.delegate?.didTouchButtonLogin()
-            vc?.modalPresentationStyle = .fullScreen
-            self.present(vc!, animated: true, completion: nil)
-            
-//            print("Usuário logado")
-            
-        } 
+        }
+        
     }
-    
+ 
 }
-
 protocol LoginViewControllerDelegate {
     func didTouchButtonLogin() -> UIViewController
 }
 
  
+

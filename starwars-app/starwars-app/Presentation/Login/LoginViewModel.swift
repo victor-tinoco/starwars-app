@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 
 public protocol LoginViewModelContract {
+    var login: Driver<Bool?>{ get }
     func goLogin(email: String, password: String) 
 }
 
@@ -24,8 +25,8 @@ public class LoginViewModel: LoginViewModelContract {
            loginRelay.asDriver() }
     
     public func goLogin(email: String, password: String){
-        usecase.goLogin(email: email, password: password).subscribe(onSuccess: { sw in
-            self.loginRelay.accept(sw)
+        usecase.goLogin(email: email, password: password).subscribe(onSuccess: { login in
+            self.loginRelay.accept(login)
             }).disposed(by: disposeBag)
         
     
