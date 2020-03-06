@@ -15,12 +15,16 @@
 		6A366B9224113DD200B86105 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A366B9124113DD200B86105 /* LoginUseCase.swift */; };
 		6A366B962411416D00B86105 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A366B952411416D00B86105 /* LoginViewModel.swift */; };
 		6A366B982411652C00B86105 /* StarWarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A366B972411652C00B86105 /* StarWarsViewController.swift */; };
-		6A3C3742241029E40019DB7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C3741241029E40019DB7F /* GoogleService-Info.plist */; };
+		7817021624113D8B00CC9777 /* PeopleDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7817021524113D8B00CC9777 /* PeopleDetails.storyboard */; };
+		7817021824113DC400CC9777 /* PeopleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7817021724113DC400CC9777 /* PeopleDetailsViewController.swift */; };
+		7817021A24113DD500CC9777 /* PeopleDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7817021924113DD500CC9777 /* PeopleDetailsViewModel.swift */; };
+		7817021D2411409400CC9777 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7817021C2411409400CC9777 /* UIViewController.swift */; };
 		786EBCEC2410208900683FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EBCEB2410208900683FD6 /* AppDelegate.swift */; };
 		786EBCF02410208900683FD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EBCEF2410208900683FD6 /* ViewController.swift */; };
 		786EBCF32410208900683FD6 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786EBCF12410208900683FD6 /* LoginViewController.storyboard */; };
 		786EBCF52410208B00683FD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786EBCF42410208B00683FD6 /* Assets.xcassets */; };
 		786EBCF82410208B00683FD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786EBCF62410208B00683FD6 /* LaunchScreen.storyboard */; };
+		78ADAE0724128F78008D5589 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78ADAE0624128F78008D5589 /* GoogleService-Info.plist */; };
 		78D9E325241027F300C7C8B5 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9E324241027F300C7C8B5 /* AppDIContainer.swift */; };
 		78D9E32924102B2000C7C8B5 /* BaseAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9E32824102B2000C7C8B5 /* BaseAPIResponse.swift */; };
 		78D9E32B24102B3900C7C8B5 /* PeopleAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9E32A24102B3900C7C8B5 /* PeopleAPIResponse.swift */; };
@@ -36,8 +40,10 @@
 		6A366B9124113DD200B86105 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginUseCase.swift; path = "starwars-app/LoginUseCase.swift"; sourceTree = SOURCE_ROOT; };
 		6A366B952411416D00B86105 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		6A366B972411652C00B86105 /* StarWarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsViewController.swift; sourceTree = "<group>"; };
-		6A3C3741241029E40019DB7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		6A3C3743241033160019DB7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7817021524113D8B00CC9777 /* PeopleDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PeopleDetails.storyboard; sourceTree = "<group>"; };
+		7817021724113DC400CC9777 /* PeopleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsViewController.swift; sourceTree = "<group>"; };
+		7817021924113DD500CC9777 /* PeopleDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsViewModel.swift; sourceTree = "<group>"; };
+		7817021C2411409400CC9777 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		786EBCE82410208900683FD6 /* starwars-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "starwars-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		786EBCEB2410208900683FD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		786EBCEF2410208900683FD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +51,7 @@
 		786EBCF42410208B00683FD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		786EBCF72410208B00683FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		786EBCF92410208B00683FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78ADAE0624128F78008D5589 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78D9E324241027F300C7C8B5 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		78D9E32824102B2000C7C8B5 /* BaseAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIResponse.swift; sourceTree = "<group>"; };
 		78D9E32A24102B3900C7C8B5 /* PeopleAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleAPIResponse.swift; sourceTree = "<group>"; };
@@ -100,6 +107,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7817021B2411408300CC9777 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7817021C2411409400CC9777 /* UIViewController.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		786EBCDF2410208900683FD6 = {
 			isa = PBXGroup;
 			children = (
@@ -127,7 +142,6 @@
 				788E4CDA241022FE00B7551C /* Data */,
 				788E4CDC2410231900B7551C /* Infrastructure */,
 				786EBCEF2410208900683FD6 /* ViewController.swift */,
-				6A3C3741241029E40019DB7F /* GoogleService-Info.plist */,
 				788E4CD62410216E00B7551C /* Resources */,
 			);
 			path = "starwars-app";
@@ -136,11 +150,12 @@
 		788E4CD62410216E00B7551C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7817021B2411408300CC9777 /* Extensions */,
 				786EBCEB2410208900683FD6 /* AppDelegate.swift */,
+				78ADAE0624128F78008D5589 /* GoogleService-Info.plist */,
 				786EBCF42410208B00683FD6 /* Assets.xcassets */,
 				786EBCF62410208B00683FD6 /* LaunchScreen.storyboard */,
 				786EBCF92410208B00683FD6 /* Info.plist */,
-				6A3C3743241033160019DB7F /* GoogleService-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -184,6 +199,7 @@
 		788E4CDD2410232600B7551C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				78D9E32E2410301700C7C8B5 /* PeopleDetails */,
 				6A366B942411415300B86105 /* Login */,
 				6A366B932411414A00B86105 /* Controllers */,
 			);
@@ -254,6 +270,16 @@
 			path = RemoteStorage;
 			sourceTree = "<group>";
 		};
+		78D9E32E2410301700C7C8B5 /* PeopleDetails */ = {
+			isa = PBXGroup;
+			children = (
+				7817021524113D8B00CC9777 /* PeopleDetails.storyboard */,
+				7817021724113DC400CC9777 /* PeopleDetailsViewController.swift */,
+				7817021924113DD500CC9777 /* PeopleDetailsViewModel.swift */,
+			);
+			path = PeopleDetails;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -315,8 +341,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				786EBCF82410208B00683FD6 /* LaunchScreen.storyboard in Resources */,
-				6A3C3742241029E40019DB7F /* GoogleService-Info.plist in Resources */,
 				786EBCF52410208B00683FD6 /* Assets.xcassets in Resources */,
+				78ADAE0724128F78008D5589 /* GoogleService-Info.plist in Resources */,
+				7817021624113D8B00CC9777 /* PeopleDetails.storyboard in Resources */,
 				786EBCF32410208900683FD6 /* LoginViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,7 +399,9 @@
 			files = (
 				78D9E32924102B2000C7C8B5 /* BaseAPIResponse.swift in Sources */,
 				78D9E325241027F300C7C8B5 /* AppDIContainer.swift in Sources */,
+				7817021824113DC400CC9777 /* PeopleDetailsViewController.swift in Sources */,
 				78D9E32B24102B3900C7C8B5 /* PeopleAPIResponse.swift in Sources */,
+				7817021D2411409400CC9777 /* UIViewController.swift in Sources */,
 				6A366B982411652C00B86105 /* StarWarsViewController.swift in Sources */,
 				786EBCF02410208900683FD6 /* ViewController.swift in Sources */,
 				6A366B9024113AA200B86105 /* LoginRepositoryImpl.swift in Sources */,
@@ -381,6 +410,7 @@
 				6A366B8A24112ED500B86105 /* LoginViewController.swift in Sources */,
 				6A366B962411416D00B86105 /* LoginViewModel.swift in Sources */,
 				786EBCEC2410208900683FD6 /* AppDelegate.swift in Sources */,
+				7817021A24113DD500CC9777 /* PeopleDetailsViewModel.swift in Sources */,
 				78D9E32D24102B4800C7C8B5 /* People.swift in Sources */,
 				6A366B9224113DD200B86105 /* LoginUseCase.swift in Sources */,
 			);
