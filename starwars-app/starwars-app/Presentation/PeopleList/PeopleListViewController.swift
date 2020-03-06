@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 class PeopleListViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var peopleTableView: UITableView!
     
     var viewModel: PeopleListViewModel!
     var disposeBag = DisposeBag()
@@ -25,13 +25,13 @@ class PeopleListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        peopleTableView.register(UINib(nibName: "PeopleTableViewCell", bundle: nil), forCellReuseIdentifier: "PeopleTableViewCell")
         bind()
     }
 
     private func bind() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        viewModel.peopleList.map { $0 ?? [] }.drive(tableView.rx.items(cellIdentifier: "cell")) { index, model, cell in
-            cell.textLabel?.text = model.name
+        viewModel.peopleList.drive(peopleTableView.rx.items(cellIdentifier: "PeopleTableViewCell", cellType: PeopleTableViewCell.self)) { index, model, cell in
+            cell.configure(model: model)
         }.disposed(by: disposeBag)
     }
 

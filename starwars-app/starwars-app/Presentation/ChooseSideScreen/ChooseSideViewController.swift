@@ -27,21 +27,23 @@ class ChooseSideViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        bind()
     }
     
     @IBAction func lightSideButton(_ sender: Any) {
+        viewModel?.getLightSidePeopleList()
+    }
+
+    func bind() {
         viewModel?.peopleList.drive(onNext: { (peoples) in
-            
-            let vc = self.routes?.callListScreen(people: peoples ?? [])
-            vc?.modalPresentationStyle = .fullScreen
+            guard let people = peoples else { return }
+            let vc = self.routes?.callListScreen(people: people)
+            vc?.modalPresentationStyle = .popover
             self.present(vc!, animated: true, completion: nil)
-            
-            }).disposed(by: disposeBag)
-            viewModel?.getLightSidePeopleList()
+        }).disposed(by: disposeBag)
     }
     
     @IBAction func darkSideButton(_ sender: Any) {
-        
+        viewModel?.getDarkSidePeopleList()
     }
 }

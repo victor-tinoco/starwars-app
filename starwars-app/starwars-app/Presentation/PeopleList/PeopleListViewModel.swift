@@ -11,9 +11,9 @@ import RxSwift
 import RxCocoa
 
 class PeopleListViewModel {
-    private var peopleListRelay: BehaviorRelay<[People]?> = BehaviorRelay(value: nil)
+    private var peopleListRelay: BehaviorRelay<[People]> = BehaviorRelay(value: [])
     
-    var peopleList: Driver<[People]?> { peopleListRelay.asDriver() }
+    var peopleList: Driver<[People]> { peopleListRelay.asDriver() }
 
     init(peopleList: [People]) {
         self.peopleListRelay.accept(peopleList)

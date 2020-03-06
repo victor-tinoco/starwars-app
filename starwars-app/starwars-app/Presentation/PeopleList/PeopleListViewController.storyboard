@@ -16,23 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bMg-JK-J4f">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cGP-m7-9F8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="bMg-JK-J4f" secondAttribute="bottom" id="PjX-yh-Wdb"/>
-                            <constraint firstAttribute="bottom" secondItem="bMg-JK-J4f" secondAttribute="bottom" id="QE0-8Y-UAk"/>
-                            <constraint firstItem="bMg-JK-J4f" firstAttribute="leading" secondItem="cqD-yZ-Jt1" secondAttribute="leading" id="UUR-H3-kqd"/>
-                            <constraint firstItem="bMg-JK-J4f" firstAttribute="top" secondItem="cqD-yZ-Jt1" secondAttribute="top" id="eFD-DR-tog"/>
-                            <constraint firstItem="bMg-JK-J4f" firstAttribute="trailing" secondItem="cqD-yZ-Jt1" secondAttribute="trailing" id="wBB-EB-Xxb"/>
+                            <constraint firstItem="cGP-m7-9F8" firstAttribute="leading" secondItem="cqD-yZ-Jt1" secondAttribute="leading" id="5YO-cD-EEy"/>
+                            <constraint firstItem="cqD-yZ-Jt1" firstAttribute="trailing" secondItem="cGP-m7-9F8" secondAttribute="trailing" id="BZT-Xt-ppn"/>
+                            <constraint firstItem="cqD-yZ-Jt1" firstAttribute="bottom" secondItem="cGP-m7-9F8" secondAttribute="bottom" id="PV1-uh-gHt"/>
+                            <constraint firstItem="cGP-m7-9F8" firstAttribute="top" secondItem="cqD-yZ-Jt1" secondAttribute="top" id="WYR-wS-8WH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cqD-yZ-Jt1"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="bMg-JK-J4f" id="Z8o-NC-qya"/>
+                        <outlet property="peopleTableView" destination="cGP-m7-9F8" id="h8O-7a-rw2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rr1-P8-43Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
