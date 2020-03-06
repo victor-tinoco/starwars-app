@@ -19,7 +19,7 @@ class StarWarsViewController: UIViewController {
     
 
      static func instantiate() -> StarWarsViewController {
-          let storyboard = UIStoryboard(name: "Main", bundle: nil)
+          let storyboard = UIStoryboard(name: "LoginViewController", bundle: nil)
           let view = storyboard.instantiateViewController(withIdentifier: "StarWarsViewController") as! StarWarsViewController
          
           
