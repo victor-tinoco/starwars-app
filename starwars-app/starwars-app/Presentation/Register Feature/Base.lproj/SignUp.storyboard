@@ -47,5 +47,29 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
         </scene>
+        <!--Teste-->
+        <scene sceneID="lgF-Ya-EnV">
+            <objects>
+                <viewController storyboardIdentifier="teste" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OQu-Ox-xxa" customClass="teste" customModule="starwars_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Ux-IH-NL7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="d1e336c3a4728d0fb5abf22ffd96f6a7" translatesAutoresizingMaskIntoConstraints="NO" id="XVC-wr-N1h">
+                                <rect key="frame" x="-63" y="-28" width="540" height="924"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kEU-fk-etf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNE-mn-wLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="86"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="d1e336c3a4728d0fb5abf22ffd96f6a7" width="540" height="924"/>
+    </resources>
 </document>

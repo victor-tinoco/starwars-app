@@ -13,6 +13,7 @@
 		5F25AB9C24115E2500F9ED08 /* SignUpRepositorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25AB9B24115E2500F9ED08 /* SignUpRepositorImpl.swift */; };
 		5F8C140F241161AF0089D1BB /* SingUpUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8C140E241161AF0089D1BB /* SingUpUseCase.swift */; };
 		5F8C1411241162A30089D1BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F8C1410241162A30089D1BB /* GoogleService-Info.plist */; };
+		5FB78ED5241298AE00893E56 /* teste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB78ED4241298AE00893E56 /* teste.swift */; };
 		5FEE48F7241165C5004C6CF0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE48F6241165C5004C6CF0 /* SignUpViewController.swift */; };
 		5FEE48F9241165D0004C6CF0 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE48F8241165D0004C6CF0 /* SignUpViewModel.swift */; };
 		5FEE48FB24116D9D004C6CF0 /* SignUpDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEE48FA24116D9D004C6CF0 /* SignUpDIContainer.swift */; };
@@ -33,6 +34,7 @@
 		5F25AB9B24115E2500F9ED08 /* SignUpRepositorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpRepositorImpl.swift; path = "starwars-app/Data/RepositoryImpl/SignUpRepositorImpl.swift"; sourceTree = SOURCE_ROOT; };
 		5F8C140E241161AF0089D1BB /* SingUpUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingUpUseCase.swift; sourceTree = "<group>"; };
 		5F8C1410241162A30089D1BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5FB78ED4241298AE00893E56 /* teste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teste.swift; sourceTree = "<group>"; };
 		5FEE48F6241165C5004C6CF0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = "starwars-app/Presentation/Register Feature/SignUpViewController.swift"; sourceTree = SOURCE_ROOT; };
 		5FEE48F8241165D0004C6CF0 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewModel.swift; path = "starwars-app/Presentation/Register Feature/SignUpViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		5FEE48FA24116D9D004C6CF0 /* SignUpDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpDIContainer.swift; path = "starwars-app/Data/RepositoryImpl/SignUpDIContainer.swift"; sourceTree = SOURCE_ROOT; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				5FE592062412871A007AA5A8 /* Register Feature */,
+				5FB78ED4241298AE00893E56 /* teste.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				5F25AB9A24115D8800F9ED08 /* SingUpRepository.swift in Sources */,
 				78D9E32B24102B3900C7C8B5 /* PeopleAPIResponse.swift in Sources */,
 				786EBCF02410208900683FD6 /* ViewController.swift in Sources */,
+				5FB78ED5241298AE00893E56 /* teste.swift in Sources */,
 				5F25AB9C24115E2500F9ED08 /* SignUpRepositorImpl.swift in Sources */,
 				5FEE48FB24116D9D004C6CF0 /* SignUpDIContainer.swift in Sources */,
 				786EBCEC2410208900683FD6 /* AppDelegate.swift in Sources */,

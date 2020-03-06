@@ -20,6 +20,7 @@ class SignUpViewController: UIViewController {
     var viewModel: SignUpContract!
     let disposedBag = DisposeBag()
     let appDI = AppDIContainer()
+    let testeViewController = teste()
     
     override func viewDidLoad() {
            super.viewDidLoad()
@@ -32,19 +33,21 @@ class SignUpViewController: UIViewController {
         view.viewModel = viewModel
         return view
     }
-    func bind(){
+    func bind() {
         btnConfirm.rx.tap.bind {
             if let email = self.emailTextField.text, let password = self.passwordTextField.text {
-                self.viewModel.finishRegister.drive(onNext: { (register) in
-                        if register == true {
-                            self.viewModel.makeRegister(email: email, password: password)
-                        }else {
-                            self.viewModel.makeRegister(email: email, password: password)
-                        }
-                    }).disposed(by: self.disposedBag)
-            
-                }
+                self.viewModel.makeRegister(email: email, password: password)
+            }
         }.disposed(by: disposedBag)
+        self.viewModel.finishRegister.drive(onNext: { (register) in
+            if register == true {
+                let vc = self.testeViewController.instantiate()
+                self.present(vc, animated: true, completion: nil)
+                //mostrar cadastro com sucesso depois fecha a tela
+            }else {
+                //mostrar erro de cadastro
+            }
+        }).disposed(by: disposedBag)
     }
     
 }

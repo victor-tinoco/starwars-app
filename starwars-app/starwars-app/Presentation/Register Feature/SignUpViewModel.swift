@@ -30,7 +30,7 @@ class SignUpViewModel: SignUpContract {
     func makeRegister(email: String, password: String) {
         registerUseCase.registerUser(email: email, password: password).subscribe(onSuccess: { (register) in
             self.registerRelay.accept(register)
-            }).disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
     }
     
     
