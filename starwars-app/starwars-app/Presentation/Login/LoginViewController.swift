@@ -65,6 +65,13 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func resetPasswordButton(_ sender: Any) {
+        
+        let vc = ResetPasswordViewController.instantiate()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+        
+    }
 }
 
 protocol LoginViewControllerDelegate {
