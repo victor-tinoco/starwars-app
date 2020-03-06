@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2043194E531ABF3833E1256D /* Pods_starwars_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC9D12ACDF81637DE52825 /* Pods_starwars_app.framework */; };
 		5A0FFF3F241283FD0057B290 /* PeopleListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0FFF3E241283FD0057B290 /* PeopleListViewController.storyboard */; };
+		5A0FFF42241290440057B290 /* ChooseSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FFF41241290440057B290 /* ChooseSideViewController.swift */; };
+		5A0FFF44241290510057B290 /* ChoseSideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FFF43241290510057B290 /* ChoseSideViewModel.swift */; };
+		5A0FFF462412906A0057B290 /* ChooseSideViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0FFF452412906A0057B290 /* ChooseSideViewController.storyboard */; };
 		5A7C5543241140AD00B96D5F /* MoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C5542241140AD00B96D5F /* MoyaService.swift */; };
 		5A7C55452411414700B96D5F /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C55442411414700B96D5F /* PeopleService.swift */; };
 		5A7C55472411420A00B96D5F /* PeopleListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C55462411420A00B96D5F /* PeopleListRepository.swift */; };
@@ -30,6 +33,9 @@
 
 /* Begin PBXFileReference section */
 		5A0FFF3E241283FD0057B290 /* PeopleListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PeopleListViewController.storyboard; sourceTree = "<group>"; };
+		5A0FFF41241290440057B290 /* ChooseSideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSideViewController.swift; sourceTree = "<group>"; };
+		5A0FFF43241290510057B290 /* ChoseSideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoseSideViewModel.swift; sourceTree = "<group>"; };
+		5A0FFF452412906A0057B290 /* ChooseSideViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChooseSideViewController.storyboard; sourceTree = "<group>"; };
 		5A7C5542241140AD00B96D5F /* MoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaService.swift; sourceTree = "<group>"; };
 		5A7C55442411414700B96D5F /* PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 		5A7C55462411420A00B96D5F /* PeopleListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PeopleListRepository.swift; path = "starwars-app/Domain/Repositories/PeopleListRepository.swift"; sourceTree = SOURCE_ROOT; };
@@ -67,6 +73,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A0FFF402412901E0057B290 /* ChooseSideScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5A0FFF41241290440057B290 /* ChooseSideViewController.swift */,
+				5A0FFF452412906A0057B290 /* ChooseSideViewController.storyboard */,
+				5A0FFF43241290510057B290 /* ChoseSideViewModel.swift */,
+			);
+			path = ChooseSideScreen;
+			sourceTree = "<group>";
+		};
 		5A7C554C24115E0200B96D5F /* PeopleList */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +194,7 @@
 		788E4CDD2410232600B7551C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5A0FFF402412901E0057B290 /* ChooseSideScreen */,
 				5A7C554C24115E0200B96D5F /* PeopleList */,
 			);
 			path = Presentation;
@@ -313,6 +330,7 @@
 				6A3C3742241029E40019DB7F /* GoogleService-Info.plist in Resources */,
 				5A0FFF3F241283FD0057B290 /* PeopleListViewController.storyboard in Resources */,
 				786EBCF52410208B00683FD6 /* Assets.xcassets in Resources */,
+				5A0FFF462412906A0057B290 /* ChooseSideViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,12 +389,14 @@
 				5A7C555124115F0C00B96D5F /* PeopleListViewModel.swift in Sources */,
 				5A7C55492411428300B96D5F /* PeopleListRepositoryImpl.swift in Sources */,
 				78D9E32B24102B3900C7C8B5 /* PeopleAPIResponse.swift in Sources */,
+				5A0FFF44241290510057B290 /* ChoseSideViewModel.swift in Sources */,
 				5A7C5543241140AD00B96D5F /* MoyaService.swift in Sources */,
 				786EBCF02410208900683FD6 /* ViewController.swift in Sources */,
 				786EBCEC2410208900683FD6 /* AppDelegate.swift in Sources */,
 				5A7C55472411420A00B96D5F /* PeopleListRepository.swift in Sources */,
 				5A7C554B241146E000B96D5F /* PeopleListUseCase.swift in Sources */,
 				78D9E32D24102B4800C7C8B5 /* People.swift in Sources */,
+				5A0FFF42241290440057B290 /* ChooseSideViewController.swift in Sources */,
 				5A7C55452411414700B96D5F /* PeopleService.swift in Sources */,
 				5A7C5553241174FB00B96D5F /* PeopleListDIContainer.swift in Sources */,
 			);
