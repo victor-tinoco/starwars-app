@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 
 
-class SignUpViewController: UIViewController{
+class SignUpViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -20,6 +20,11 @@ class SignUpViewController: UIViewController{
     var viewModel: SignUpContract!
     let disposedBag = DisposeBag()
     let appDI = AppDIContainer()
+    
+    override func viewDidLoad() {
+           super.viewDidLoad()
+           bind()
+       }
 
     static func instantiate(viewModel: SignUpContract) -> SignUpViewController {
         let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
@@ -42,10 +47,6 @@ class SignUpViewController: UIViewController{
         }.disposed(by: disposedBag)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        bind()
-    }
 }
 protocol SignupRoutes {
     func makeHomeViewController()
