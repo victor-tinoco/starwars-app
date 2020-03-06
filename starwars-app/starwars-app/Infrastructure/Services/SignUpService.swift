@@ -10,9 +10,32 @@ import UIKit
 import RxCocoa
 import RxSwift
 import FirebaseAuth
+import FirebaseFirestore
 
 class SignUpService {
     
+    let db = Firestore.firestore()
+    
+    func sendData(name: String, birthday:String, email:String, password:String) -> Single<Bool>{
+        return Single.create { single in
+            var ref: DocumentReference? = nil
+            ref = self.db.collection("users").addDocument(data: [
+                "name": name,
+                "birthday": birthday,
+                "email": email,
+                "password": password
+            ]){ err in
+                if let err = err {
+                    single(.success(false))
+                    print("Error adding document: \(err)")
+                } else {
+                    single(.success(true))
+                    print("Document added with ID: \(ref!.documentID)")
+                }
+            }
+            return Disposables.create()
+        }
+    }
     
     func registerUser(email:String, password:String) -> Single<Bool> {
         return Single.create { single in
