@@ -12,6 +12,9 @@
 		6A3115862412B6830029EEC9 /* ResetPasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A3115852412B6830029EEC9 /* ResetPasswordViewController.storyboard */; };
 		6A31158A2412D0F50029EEC9 /* ResetPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3115892412D0F50029EEC9 /* ResetPasswordService.swift */; };
 		6A31158C2412D32E0029EEC9 /* ResetPasswordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A31158B2412D32E0029EEC9 /* ResetPasswordRepository.swift */; };
+		6A31158E2412D4BD0029EEC9 /* ResetPasswordRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A31158D2412D4BD0029EEC9 /* ResetPasswordRepositoryImpl.swift */; };
+		6A3115902412D65E0029EEC9 /* ResetPasswordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A31158F2412D65E0029EEC9 /* ResetPasswordUseCase.swift */; };
+		6A3115922412D8060029EEC9 /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3115912412D8060029EEC9 /* ResetPasswordViewModel.swift */; };
 		6A366B8A24112ED500B86105 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A366B8924112ED500B86105 /* LoginViewController.swift */; };
 		6A366B8C2411317100B86105 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A366B8B2411317100B86105 /* LoginService.swift */; };
 		6A366B8E2411358A00B86105 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A366B8D2411358A00B86105 /* LoginRepository.swift */; };
@@ -41,6 +44,9 @@
 		6A3115852412B6830029EEC9 /* ResetPasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPasswordViewController.storyboard; sourceTree = "<group>"; };
 		6A3115892412D0F50029EEC9 /* ResetPasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordService.swift; sourceTree = SOURCE_ROOT; };
 		6A31158B2412D32E0029EEC9 /* ResetPasswordRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordRepository.swift; sourceTree = SOURCE_ROOT; };
+		6A31158D2412D4BD0029EEC9 /* ResetPasswordRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordRepositoryImpl.swift; sourceTree = SOURCE_ROOT; };
+		6A31158F2412D65E0029EEC9 /* ResetPasswordUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordUseCase.swift; sourceTree = SOURCE_ROOT; };
+		6A3115912412D8060029EEC9 /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		6A366B8924112ED500B86105 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6A366B8B2411317100B86105 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginService.swift; path = "starwars-app/LoginService.swift"; sourceTree = SOURCE_ROOT; };
 		6A366B8D2411358A00B86105 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRepository.swift; path = "starwars-app/LoginRepository.swift"; sourceTree = SOURCE_ROOT; };
@@ -94,6 +100,7 @@
 			children = (
 				6A3115822412B6370029EEC9 /* ResetPasswordViewController.swift */,
 				6A3115852412B6830029EEC9 /* ResetPasswordViewController.storyboard */,
+				6A3115912412D8060029EEC9 /* ResetPasswordViewModel.swift */,
 			);
 			path = ResetPassword;
 			sourceTree = "<group>";
@@ -251,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				6A366B9124113DD200B86105 /* LoginUseCase.swift */,
+				6A31158F2412D65E0029EEC9 /* ResetPasswordUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -277,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				6A366B8F24113AA200B86105 /* LoginRepositoryImpl.swift */,
+				6A31158D2412D4BD0029EEC9 /* ResetPasswordRepositoryImpl.swift */,
 			);
 			path = RepositoryImpl;
 			sourceTree = "<group>";
@@ -418,12 +427,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A31158E2412D4BD0029EEC9 /* ResetPasswordRepositoryImpl.swift in Sources */,
 				78D9E32924102B2000C7C8B5 /* BaseAPIResponse.swift in Sources */,
 				78D9E325241027F300C7C8B5 /* AppDIContainer.swift in Sources */,
 				6A3115832412B6370029EEC9 /* ResetPasswordViewController.swift in Sources */,
 				7817021824113DC400CC9777 /* PeopleDetailsViewController.swift in Sources */,
+				6A3115922412D8060029EEC9 /* ResetPasswordViewModel.swift in Sources */,
 				6A31158A2412D0F50029EEC9 /* ResetPasswordService.swift in Sources */,
 				78D9E32B24102B3900C7C8B5 /* PeopleAPIResponse.swift in Sources */,
+				6A3115902412D65E0029EEC9 /* ResetPasswordUseCase.swift in Sources */,
 				7817021D2411409400CC9777 /* UIViewController.swift in Sources */,
 				6A366B982411652C00B86105 /* StarWarsViewController.swift in Sources */,
 				6A31158C2412D32E0029EEC9 /* ResetPasswordRepository.swift in Sources */,
