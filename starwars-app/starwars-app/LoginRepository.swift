@@ -12,5 +12,5 @@ import RxSwift
 
 protocol LoginRepository {
     func getLogin(email: String, password: String) -> Single<Bool>
-
+    
 }

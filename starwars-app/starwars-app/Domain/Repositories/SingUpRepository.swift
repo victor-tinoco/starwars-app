@@ -12,4 +12,5 @@ import RxCocoa
 
 protocol SignUpRepository {
     func registerUser(email:String, password:String) -> Single<Bool>
+    func sendData(name: String, birthday:String, email:String, password:String) -> Single<Bool>
 }

@@ -10,15 +10,19 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class SignUpUseCase{
+class SignUpUseCase {
     private let signUpImpl: SignUpRepositorImpl
     private let disposeBag = DisposeBag()
     
-    init(signUpImpl: SignUpRepositorImpl){
+    init(signUpImpl: SignUpRepositorImpl) {
         self.signUpImpl = signUpImpl
     }
     
-    func registerUser(email: String, password:String) -> Single<Bool>{
+    func registerUser(email: String, password:String) -> Single<Bool> {
        return signUpImpl.registerUser(email: email, password: password)
+    }
+    
+    func sendData(name: String, birthday: String, email: String, password: String) -> Single<Bool> {
+        return signUpImpl.sendData(name: name, birthday: birthday, email: email, password: password)
     }
 }

@@ -11,12 +11,17 @@ import RxSwift
 import RxCocoa
 
 class SignUpRepositorImpl: SignUpRepository {
+  
+    
     
     let signUpService = SignUpService()
     func registerUser(email: String, password: String) -> Single<Bool> {
         signUpService.registerUser(email: email, password: password)
-        
     }
+    
+    func sendData(name: String, birthday: String, email: String, password: String) -> Single<Bool> {
+        signUpService.sendData(name: name, birthday: birthday, email: email, password: password)
+      }
     
     
 }
