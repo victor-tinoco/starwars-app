@@ -19,10 +19,11 @@ class LoginService {
                 if error != nil{
                     single(.success(false))
                     print ("erro")
-                    
+                    return
                 }else {
                     single(.success(true))
                     print("Usuário logado")
+                    return
                 }
                 
             })

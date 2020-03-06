@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 public protocol LoginViewModelContract {
-    var login: Driver<Bool?>{ get }
+    var loginResponse: Driver<Bool?>{ get }
     func goLogin(email: String, password: String) 
 }
 
@@ -21,7 +21,7 @@ public class LoginViewModel: LoginViewModelContract {
     
     private let loginRelay: BehaviorRelay<Bool?> =
         BehaviorRelay(value: nil)
-       public var login: Driver<Bool?>{ return
+       public var loginResponse: Driver<Bool?>{ return
            loginRelay.asDriver() }
     
     public func goLogin(email: String, password: String){
