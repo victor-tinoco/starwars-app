@@ -14,6 +14,7 @@ protocol SignUpContract {
     var  finishRegister: Driver<Bool?> {get}
     var storeRegister: Driver<Bool?> {get}
     func makeRegister(email: String, password: String)
+     func makeRegisterStore(name: String, birthday: String, email: String, password: String)
 }
 
 class SignUpViewModel: SignUpContract {
