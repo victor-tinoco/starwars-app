@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         bind()
         
         
     }
@@ -44,23 +44,29 @@ class LoginViewController: UIViewController {
         
         if let email = emailTextField.text, let password = passwordTextField.text, !password.isEmpty, !email.isEmpty {
             
-            self.viewModel.login.drive(onNext: { (login) in
-                if login == true {
-                    self.viewModel.goLogin(email: email, password: password)
-                    let vc = self.delegate?.didTouchButtonLogin()
-                    vc?.modalPresentationStyle = .fullScreen
-                    self.present(vc!, animated: true, completion: nil)
-                }else{
-                    self.viewModel.goLogin(email: email, password: password)
-                }
-                
-                }).disposed(by: dispose)
-            
+            self.viewModel.goLogin(email: email, password: password)
         }
         
     }
- 
+    
+    func bind() {
+        
+        self.viewModel.loginResponse.drive(onNext: { (login) in
+            if login == true {
+                
+                let vc = self.delegate?.didTouchButtonLogin()
+                vc?.modalPresentationStyle = .fullScreen
+                self.present(vc!, animated: true, completion: nil)
+            }else{
+                print("erro")
+            }
+            
+        }).disposed(by: dispose)
+        
+    }
+    
 }
+
 protocol LoginViewControllerDelegate {
     func didTouchButtonLogin() -> UIViewController
 }
