@@ -16,8 +16,8 @@ class PeopleListViewController: UIViewController {
     var viewModel: PeopleListViewModelProtocol!
     var disposeBag = DisposeBag()
     
-    public class func create(viewModel: PeopleListViewModel) -> PeopleListViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    public class func instantiate(viewModel: PeopleListViewModel) -> PeopleListViewController {
+        let storyboard = UIStoryboard(name: "PeopleListViewController", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "PeopleListViewController") as! PeopleListViewController
         view.viewModel = viewModel
         return view
@@ -36,7 +36,7 @@ class PeopleListViewController: UIViewController {
             cell.textLabel?.text = model.name
         }.disposed(by: disposeBag)
     }
-    
+
     @IBAction func lightSideButton(_ sender: Any) {
         viewModel.showLightSidePeopleList()
         tableView.reloadData()

@@ -36,8 +36,8 @@ class PeopleListViewModel: PeopleListViewModelProtocol {
     }
     
     func showDarkSidePeopleList() {
-        peopleListUseCase.getLightSidePeopleList().subscribe(onSuccess: { (peopleList) in
+        peopleListUseCase.getDarkSidePeopleList().subscribe(onSuccess: { (peopleList) in
             self.peopleListRelay.accept(peopleList)
         }).disposed(by: disposeBag)
-    }
+    }                                                                                                     
 }

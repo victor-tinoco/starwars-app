@@ -11,6 +11,6 @@ import Foundation
 class PeopleListDIContainer {
     
     func makePeopleListViewController() -> PeopleListViewController {
-        return PeopleListViewController.create(viewModel: PeopleListViewModel(peopleListUseCase: PeopleListUseCase(peopleListRepo: PeopleListRepositoryImpl())))
+        return PeopleListViewController.instantiate(viewModel: PeopleListViewModel(peopleListUseCase: PeopleListUseCase(peopleListRepo: PeopleListRepositoryImpl())))
     }
 }
