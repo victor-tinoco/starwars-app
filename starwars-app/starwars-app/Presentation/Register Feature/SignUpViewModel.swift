@@ -21,10 +21,17 @@ class SignUpViewModel: SignUpContract {
     private let registerRelay: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
     var finishRegister: Driver<Bool?> {return registerRelay.asDriver()}
     let registerUseCase: SignUpUseCase
+    private let storeRegisterRelay: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
+    var storeRegister: Driver<Bool?> {return storeRegisterRelay.asDriver()}
     let disposeBag = DisposeBag()
+    
     
     init(registerUseCase: SignUpUseCase) {
         self.registerUseCase = registerUseCase
+    }
+    
+    func makeRegisterStore(name: String, birthday: String, email: String, password: String){
+        registerUseCase.
     }
     
     func makeRegister(email: String, password: String) {
