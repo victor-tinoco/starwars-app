@@ -12,6 +12,7 @@ import RxSwift
 
 protocol SignUpContract {
     var  finishRegister: Driver<Bool?> {get}
+    var storeRegister: Driver<Bool?> {get}
     func makeRegister(email: String, password: String)
 }
 
@@ -31,7 +32,9 @@ class SignUpViewModel: SignUpContract {
     }
     
     func makeRegisterStore(name: String, birthday: String, email: String, password: String){
-        registerUseCase.
+        registerUseCase.sendData(name: name, birthday: birthday, email: email, password: password).subscribe(onSuccess: { (register) in
+            self.storeRegisterRelay.accept(register)
+            }).disposed(by: disposeBag)
     }
     
     func makeRegister(email: String, password: String) {
