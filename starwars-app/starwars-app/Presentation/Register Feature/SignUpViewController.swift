@@ -20,7 +20,6 @@ class SignUpViewController: UIViewController {
     var viewModel: SignUpContract!
     let disposedBag = DisposeBag()
     let appDI = AppDIContainer()
-    let testeViewController = teste()
     
     override func viewDidLoad() {
            super.viewDidLoad()
@@ -41,8 +40,6 @@ class SignUpViewController: UIViewController {
         }.disposed(by: disposedBag)
         self.viewModel.finishRegister.drive(onNext: { (register) in
             if register == true {
-                let vc = self.testeViewController.instantiate()
-                self.present(vc, animated: true, completion: nil)
                 //mostrar cadastro com sucesso depois fecha a tela
             }else {
                 //mostrar erro de cadastro
