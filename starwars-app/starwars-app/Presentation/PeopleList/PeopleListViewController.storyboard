@@ -16,34 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bMg-JK-J4f">
-                                <rect key="frame" x="0.0" y="139" width="414" height="757"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bMg-JK-J4f">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKj-dY-tPt">
-                                <rect key="frame" x="75" y="94" width="30" height="30"/>
-                                <state key="normal" title="Luz"/>
-                                <connections>
-                                    <action selector="lightSideButton:" destination="JWK-oI-uVg" eventType="touchUpInside" id="bVN-JF-C0q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqs-4N-awe">
-                                <rect key="frame" x="271" y="94" width="68" height="30"/>
-                                <state key="normal" title="Escuridão"/>
-                                <connections>
-                                    <action selector="darkSideButton:" destination="JWK-oI-uVg" eventType="touchUpInside" id="jbg-0M-54A"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="fqs-4N-awe" firstAttribute="top" secondItem="cqD-yZ-Jt1" secondAttribute="top" constant="50" id="6WD-YY-sMc"/>
-                            <constraint firstItem="mKj-dY-tPt" firstAttribute="top" secondItem="cqD-yZ-Jt1" secondAttribute="top" constant="50" id="6gV-56-QLv"/>
-                            <constraint firstItem="mKj-dY-tPt" firstAttribute="leading" secondItem="cqD-yZ-Jt1" secondAttribute="leading" constant="75" id="9kA-0P-jjX"/>
+                            <constraint firstAttribute="bottom" secondItem="bMg-JK-J4f" secondAttribute="bottom" id="PjX-yh-Wdb"/>
                             <constraint firstAttribute="bottom" secondItem="bMg-JK-J4f" secondAttribute="bottom" id="QE0-8Y-UAk"/>
                             <constraint firstItem="bMg-JK-J4f" firstAttribute="leading" secondItem="cqD-yZ-Jt1" secondAttribute="leading" id="UUR-H3-kqd"/>
-                            <constraint firstItem="bMg-JK-J4f" firstAttribute="top" secondItem="mKj-dY-tPt" secondAttribute="bottom" constant="15" id="Vf1-Gd-yWe"/>
-                            <constraint firstItem="cqD-yZ-Jt1" firstAttribute="trailing" secondItem="fqs-4N-awe" secondAttribute="trailing" constant="75" id="dte-7u-Tid"/>
+                            <constraint firstItem="bMg-JK-J4f" firstAttribute="top" secondItem="cqD-yZ-Jt1" secondAttribute="top" id="eFD-DR-tog"/>
                             <constraint firstItem="bMg-JK-J4f" firstAttribute="trailing" secondItem="cqD-yZ-Jt1" secondAttribute="trailing" id="wBB-EB-Xxb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cqD-yZ-Jt1"/>

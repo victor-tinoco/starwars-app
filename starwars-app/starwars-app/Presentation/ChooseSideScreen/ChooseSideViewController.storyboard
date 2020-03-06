@@ -19,10 +19,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kK-9K-uxk">
                                 <rect key="frame" x="94" y="433" width="30" height="30"/>
                                 <state key="normal" title="Luz"/>
+                                <connections>
+                                    <action selector="lightSideButton:" destination="K7M-s2-J7e" eventType="touchUpInside" id="4JL-rI-DcJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXw-2F-byx">
                                 <rect key="frame" x="263" y="433" width="68" height="30"/>
                                 <state key="normal" title="Escuridão"/>
+                                <connections>
+                                    <action selector="darkSideButton:" destination="K7M-s2-J7e" eventType="touchUpInside" id="zyk-rb-NCU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

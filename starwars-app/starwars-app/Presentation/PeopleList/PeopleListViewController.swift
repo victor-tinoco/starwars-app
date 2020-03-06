@@ -13,7 +13,7 @@ import RxCocoa
 class PeopleListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var viewModel: PeopleListViewModelProtocol!
+    var viewModel: PeopleListViewModel!
     var disposeBag = DisposeBag()
     
     public class func instantiate(viewModel: PeopleListViewModel) -> PeopleListViewController {
@@ -25,25 +25,14 @@ class PeopleListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         bind()
     }
 
     private func bind() {
-    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         viewModel.peopleList.map { $0 ?? [] }.drive(tableView.rx.items(cellIdentifier: "cell")) { index, model, cell in
-            
             cell.textLabel?.text = model.name
         }.disposed(by: disposeBag)
     }
 
-    @IBAction func lightSideButton(_ sender: Any) {
-        viewModel.showLightSidePeopleList()
-        tableView.reloadData()
-    }
-    
-    @IBAction func darkSideButton(_ sender: Any) {
-        viewModel.showDarkSidePeopleList()
-        tableView.reloadData()
-    }
 }

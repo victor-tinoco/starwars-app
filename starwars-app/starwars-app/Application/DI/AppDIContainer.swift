@@ -9,12 +9,10 @@
 import UIKit
 
 class AppDIContainer {
-    func showPeopleListViewController() -> ChooseSideViewController {
-        return makePeopleListDI.makePeopleListViewController()
+    func showChooseSideViewController() -> ChooseSideViewController {
+        return makeChooseSideDI.makeChooseSideViewController()
     }
- 
-    
-    var makePeopleListDI: PeopleListDIContainer {
-        return PeopleListDIContainer()
+    var makeChooseSideDI: ChooseDIContainer {
+        return ChooseDIContainer()
     }
 }

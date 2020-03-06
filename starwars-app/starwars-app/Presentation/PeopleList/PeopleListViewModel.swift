@@ -10,34 +10,12 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-protocol PeopleListViewModelProtocol: class {
-    var peopleList: Driver<[People]?> { get }
-    func showLightSidePeopleList()
-    func showDarkSidePeopleList()
-}
+class PeopleListViewModel {
+    private var peopleListRelay: BehaviorRelay<[People]?> = BehaviorRelay(value: nil)
+    
+    var peopleList: Driver<[People]?> { peopleListRelay.asDriver() }
 
-class PeopleListViewModel: PeopleListViewModelProtocol {
-
-    
-    private let peopleListRelay: BehaviorRelay<[People]?> = BehaviorRelay(value: nil)
-    
-    var peopleList: Driver<[People]?> { peopleListRelay.asDriver()}
-    var peopleListUseCase: PeopleListUseCase
-    var disposeBag = DisposeBag()
-    
-    init(peopleListUseCase: PeopleListUseCase) {
-        self.peopleListUseCase = peopleListUseCase
+    init(peopleList: [People]) {
+        self.peopleListRelay.accept(peopleList)
     }
-    
-    func showLightSidePeopleList() {
-        peopleListUseCase.getLightSidePeopleList().subscribe(onSuccess: { (peopleList) in
-            self.peopleListRelay.accept(peopleList)
-            }).disposed(by: disposeBag)
-    }
-    
-    func showDarkSidePeopleList() {
-        peopleListUseCase.getDarkSidePeopleList().subscribe(onSuccess: { (peopleList) in
-            self.peopleListRelay.accept(peopleList)
-        }).disposed(by: disposeBag)
-    }                                                                                                     
 }

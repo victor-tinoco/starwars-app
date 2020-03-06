@@ -10,7 +10,7 @@ import Foundation
 
 class PeopleListDIContainer {
     
-    func makePeopleListViewController() -> ChooseSideViewController {
-        return ChooseSideViewController.instantiate(viewModel: PeopleListViewModel(peopleListUseCase: PeopleListUseCase(peopleListRepo: PeopleListRepositoryImpl())))
+    func makePeopleListViewController(people: [People]) -> PeopleListViewController {
+        return PeopleListViewController.instantiate(viewModel: PeopleListViewModel(peopleList: people))
     }
 }

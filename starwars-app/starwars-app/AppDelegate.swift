@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
     
-        let firstRootView = appDI.showPeopleListViewController()
+        let firstRootView = appDI.showChooseSideViewController()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let navigation = UINavigationController(rootViewController: firstRootView)
