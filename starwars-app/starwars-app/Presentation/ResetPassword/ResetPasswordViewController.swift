@@ -8,15 +8,20 @@
 
 import UIKit
 import FirebaseAuth
+import RxSwift
+import RxCocoa
 
 class ResetPasswordViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     
+    var viewModel: ResetPasswordViewModelContract!
+    var dispose = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        bind()
     }
     
     static func instantiate() -> ResetPasswordViewController {
@@ -26,19 +31,23 @@ class ResetPasswordViewController: UIViewController {
              }
     
     @IBAction func resetButton(_ sender: Any) {
-        if let email = emailTextField.text{
-            self.sendPasswordReset(withEmail: email)
+        if let email = emailTextField.text, !email.isEmpty {
+            self.viewModel.goReset(email: email)
         }
         
         
     }
-        func sendPasswordReset(withEmail email: String, _ callback: ((Error?) -> ())? = nil){
-            Auth.auth().sendPasswordReset(withEmail: email) { error in
-                if let error = error {
-                    print("deu  ruim")
-                } else {
-                    print("deu bom")
+        func bind(){
+            self.viewModel.resetResponse.drive(onNext: { (reset) in
+                if reset == true {
+                  
+                    
+                }else{
+                    print("n foi :(")
                 }
-            }
-        }
+                
+            }).disposed(by: dispose)
+            
+            
+    }
 }
