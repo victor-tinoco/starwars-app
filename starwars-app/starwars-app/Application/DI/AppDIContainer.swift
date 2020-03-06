@@ -9,6 +9,8 @@
 import UIKit
 
 class AppDIContainer {
+ 
+    let signUpDI = SignUpDIContainer()
     
     var window: UIWindow?
         
