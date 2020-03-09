@@ -67,7 +67,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func resetPasswordButton(_ sender: Any) {
         
-        let vc = ResetPasswordViewController.instantiate()
+        let vc = ResetPasswordViewController.instantiate(viewModel: ResetViewModel(usecase: ResetPasswordUseCase(resetRepository: ResetPasswordRepositoryImpl())))
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
         
