@@ -46,6 +46,7 @@
                     <connections>
                         <outlet property="factionLabel" destination="B0V-bh-6zE" id="Kgu-Rg-J6c"/>
                         <outlet property="nameLabel" destination="2df-oK-fz9" id="Pwr-da-OAC"/>
+                        <outlet property="shareButton" destination="H53-06-YEh" id="YAR-Hp-0xB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phy-Of-pOz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

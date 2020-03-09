@@ -9,5 +9,7 @@
 import UIKit
 
 class AppDIContainer {
-    
+    func makeDetailsViewController() -> UIViewController {
+        return PeopleDetailsViewController.instantiate(viewModel: PeopleDetailsViewModel(people: People(name: "", height: "", mass: "", faction: "", hair_color: "", skin_color: "", eye_color: "", birth_year: "", gender: "")))!
+    }
 }
