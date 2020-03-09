@@ -20,13 +20,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+    
+        let firstRootView = appDI.showChooseSideViewController()
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = appDI.makeHomeViewController()
-        window?.rootViewController = vc
+        let navigation = UINavigationController(rootViewController: firstRootView)
+        navigation.isNavigationBarHidden = true
+        self.window?.rootViewController = navigation
         window?.makeKeyAndVisible()
         
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        let vc = appDI.makeHomeViewController()
+//        window?.rootViewController = vc
+//        window?.makeKeyAndVisible()
+//
         return true
     }
-
 }
