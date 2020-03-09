@@ -29,10 +29,6 @@ class ChooseSideViewController: UIViewController {
         super.viewDidLoad()
         bind()
     }
-    
-    @IBAction func lightSideButton(_ sender: Any) {
-        viewModel?.getLightSidePeopleList()
-    }
 
     func bind() {
         viewModel?.peopleList.drive(onNext: { (peoples) in
@@ -43,23 +39,27 @@ class ChooseSideViewController: UIViewController {
         }).disposed(by: disposeBag)
     }
     
-    func shareImage() {
+    @IBAction func lightSideButton(_ sender: Any) {
+        viewModel?.getLightSidePeopleList()
+    }
+
+    @IBAction func darkSideButton(_ sender: Any) {
+        viewModel?.getDarkSidePeopleList()
+    }
+    
+    @IBAction func share(_ sender: Any) {
+        shareImage(vc: self)
+    }
+}
+
+extension UIViewController {
+    func shareImage(vc: UIViewController) {
         let bounds = UIScreen.main.bounds
         UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0.0)
         self.view.drawHierarchy(in: bounds, afterScreenUpdates: false)
         let img = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         let activityViewController = UIActivityViewController(activityItems: [img], applicationActivities: nil)
-        self.present(activityViewController, animated: true, completion: nil)
-
-    }
-    
-    @IBAction func darkSideButton(_ sender: Any) {
-        viewModel?.getDarkSidePeopleList()
-    }
-    
-    
-    @IBAction func share(_ sender: Any) {
-        shareImage()
+        vc.present(activityViewController, animated: true, completion: nil)
     }
 }
