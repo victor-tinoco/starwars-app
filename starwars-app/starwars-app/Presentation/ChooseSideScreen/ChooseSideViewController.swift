@@ -48,18 +48,18 @@ class ChooseSideViewController: UIViewController {
     }
     
     @IBAction func share(_ sender: Any) {
-        shareImage(vc: self)
+        shareImage()
     }
 }
 
 extension UIViewController {
-    func shareImage(vc: UIViewController) {
+    func shareImage() {
         let bounds = UIScreen.main.bounds
         UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0.0)
         self.view.drawHierarchy(in: bounds, afterScreenUpdates: false)
         let img = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         let activityViewController = UIActivityViewController(activityItems: [img], applicationActivities: nil)
-        vc.present(activityViewController, animated: true, completion: nil)
+        self.present(activityViewController, animated: true, completion: nil)
     }
 }
