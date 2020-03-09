@@ -9,7 +9,17 @@
 import UIKit
 
 class PeopleDetailsViewController: UIViewController {
-
+    @IBOutlet weak var nameLabel: UILabel! {
+        didSet {
+            self.nameLabel.text = _viewModel?.name
+        }
+    }
+    @IBOutlet weak var factionLabel: UILabel! {
+        didSet {
+            self.factionLabel.text = _viewModel?.faction
+        }
+    }
+    
     private var _viewModel: PeopleDetailsViewModelContract?
     
     override func viewDidLoad() {
