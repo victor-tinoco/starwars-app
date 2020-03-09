@@ -16,10 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H53-06-YEh">
-                                <rect key="frame" x="184" y="824" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H53-06-YEh">
+                                <rect key="frame" x="162" y="822" width="90" height="30"/>
+                                <state key="normal" title="Compartilhar"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2df-oK-fz9">
                                 <rect key="frame" x="20" y="44" width="374" height="27"/>
@@ -37,6 +36,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gsr-wH-Cgz" firstAttribute="trailing" secondItem="H53-06-YEh" secondAttribute="trailing" constant="162" id="CXJ-uW-VKb"/>
+                            <constraint firstItem="H53-06-YEh" firstAttribute="leading" secondItem="gsr-wH-Cgz" secondAttribute="leading" constant="162" id="EbT-41-p1D"/>
+                            <constraint firstItem="gsr-wH-Cgz" firstAttribute="bottom" secondItem="H53-06-YEh" secondAttribute="bottom" constant="10" id="Gti-f2-1df"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gsr-wH-Cgz"/>
                     </view>
                     <connections>
