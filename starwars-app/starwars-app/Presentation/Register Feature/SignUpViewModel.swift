@@ -11,17 +11,14 @@ import RxCocoa
 import RxSwift
 
 protocol SignUpContract {
-    var  finishRegister: Driver<Bool?> {get}
+    var finishRegister: Driver<String?> {get}
     var storeRegister: Driver<Bool?> {get}
-    func makeRegister(email: String, password: String)
-     func makeRegisterStore(name: String, birthday: String, email: String, password: String)
+    func makeRegister(name: String, birthday: String, email: String, password: String)
 }
 
 class SignUpViewModel: SignUpContract {
-    
-    
-    private let registerRelay: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
-    var finishRegister: Driver<Bool?> {return registerRelay.asDriver()}
+    private let registerRelay: BehaviorRelay<String?> = BehaviorRelay(value: nil)
+    var finishRegister: Driver<String?> {return registerRelay.asDriver()}
     let registerUseCase: SignUpUseCase
     private let storeRegisterRelay: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
     var storeRegister: Driver<Bool?> {return storeRegisterRelay.asDriver()}
@@ -30,21 +27,25 @@ class SignUpViewModel: SignUpContract {
     
     init(registerUseCase: SignUpUseCase) {
         self.registerUseCase = registerUseCase
-    }
-    
-    func makeRegisterStore(name: String, birthday: String, email: String, password: String){
-        registerUseCase.sendData(name: name, birthday: birthday, email: email, password: password).subscribe(onSuccess: { (register) in
-            self.storeRegisterRelay.accept(register)
-            }).disposed(by: disposeBag)
-    }
-    
-    func makeRegister(email: String, password: String) {
-        registerUseCase.registerUser(email: email, password: password).subscribe(onSuccess: { (register) in
-            self.registerRelay.accept(register)
+        
+        storeRegister.drive(onNext: { (register) in
+            if register == true {
+                print("Cadastrado com Sucesso no Firebase Store")
+            }else {
+                print("Error Firebase Store")
+            }
         }).disposed(by: disposeBag)
     }
     
+    func makeRegister(name: String, birthday: String, email: String, password: String) {
+        registerUseCase.registerUser(email: email, password: password).subscribe(onSuccess: { (userID) in
+            self.makeRegisterStore(name: <#T##String#>, birthday: <#T##String#>, email: <#T##String#>, password: <#T##String#>, uid: <#T##String#>)
+            }).disposed(by: disposeBag)
+    }
     
-    
-    
+    private func makeRegisterStore(name: String, birthday: String, email: String, password: String, uid: String){
+        registerUseCase.sendData(name: name, birthday: birthday, email: email, password: password, uid: uid).subscribe(onSuccess: { (register) in
+            self.storeRegisterRelay.accept(register)
+        }).disposed(by: disposeBag)
+    }
 }

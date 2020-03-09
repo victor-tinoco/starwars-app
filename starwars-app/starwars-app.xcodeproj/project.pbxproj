@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2043194E531ABF3833E1256D /* Pods_starwars_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC9D12ACDF81637DE52825 /* Pods_starwars_app.framework */; };
+		5F19291E24168A0A001E3D61 /* LoginDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F19291D24168A0A001E3D61 /* LoginDIContainer.swift */; };
 		5F25AB982411419200F9ED08 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25AB972411419200F9ED08 /* SignUpService.swift */; };
 		5F25AB9A24115D8800F9ED08 /* SingUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25AB9924115D8800F9ED08 /* SingUpRepository.swift */; };
 		5F25AB9C24115E2500F9ED08 /* SignUpRepositorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25AB9B24115E2500F9ED08 /* SignUpRepositorImpl.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F19291D24168A0A001E3D61 /* LoginDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginDIContainer.swift; path = "starwars-app/Infrastructure/Services/LoginDIContainer.swift"; sourceTree = SOURCE_ROOT; };
 		5F25AB972411419200F9ED08 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
 		5F25AB9924115D8800F9ED08 /* SingUpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingUpRepository.swift; path = "starwars-app/Domain/Repositories/SingUpRepository.swift"; sourceTree = SOURCE_ROOT; };
 		5F25AB9B24115E2500F9ED08 /* SignUpRepositorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpRepositorImpl.swift; path = "starwars-app/Data/RepositoryImpl/SignUpRepositorImpl.swift"; sourceTree = SOURCE_ROOT; };
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				5FEE48FA24116D9D004C6CF0 /* SignUpDIContainer.swift */,
+				5F19291D24168A0A001E3D61 /* LoginDIContainer.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 			files = (
 				78D9E32924102B2000C7C8B5 /* BaseAPIResponse.swift in Sources */,
 				78D9E325241027F300C7C8B5 /* AppDIContainer.swift in Sources */,
+				5F19291E24168A0A001E3D61 /* LoginDIContainer.swift in Sources */,
 				7817021824113DC400CC9777 /* PeopleDetailsViewController.swift in Sources */,
 				5F25AB9A24115D8800F9ED08 /* SingUpRepository.swift in Sources */,
 				5FB78EEC2412DA6A00893E56 /* SignUpViewController.swift in Sources */,

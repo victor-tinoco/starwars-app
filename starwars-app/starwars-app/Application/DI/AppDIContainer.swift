@@ -9,18 +9,24 @@
 import UIKit
 
 class AppDIContainer {
- 
+    
     let signUpDI = SignUpDIContainer()
     
     var window: UIWindow?
-        
-        
-  public func makeHomeViewController() -> LoginViewController {
-    return LoginViewController.create(delegate: self, viewModel: LoginViewModel(usecase: LoginUseCase(loginRepository: LoginRepositoryImpl())))
-            
-        }
+    
+    
+    public func makeHomeViewController() -> LoginViewController {
+        return LoginViewController.create(delegate: self, viewModel: LoginViewModel(usecase: LoginUseCase(loginRepository: LoginRepositoryImpl())))
         
     }
+    func makeSignUpViewController() -> SignUpViewController {
+        let signUpRepo = SignUpRepositorImpl()
+        let signUpUseCase = SignUpUseCase(signUpImpl: signUpRepo)
+        let vm = SignUpViewModel(registerUseCase: signUpUseCase)
+        return SignUpViewController.instantiate(viewModel: vm)
+    }
+    
+}
 
 extension AppDIContainer: LoginViewControllerDelegate {
     func didTouchButtonLogin() -> UIViewController {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -16,30 +16,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="07U-ED-IdF">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="07U-ED-IdF">
                                 <rect key="frame" x="79" y="339" width="276" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ao7-Ku-lcx">
-                                <rect key="frame" x="79" y="410" width="276" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ao7-Ku-lcx">
+                                <rect key="frame" x="79" y="400" width="276" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugG-fN-3a9">
-                                <rect key="frame" x="129" y="484" width="157" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugG-fN-3a9">
+                                <rect key="frame" x="129" y="564" width="157" height="54"/>
                                 <state key="normal" title="Confirmar"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F2K-4U-ik5">
+                                <rect key="frame" x="79" y="458" width="276" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Data de Nascimento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4MM-tc-24e">
+                                <rect key="frame" x="79" y="511" width="276" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="07U-ED-IdF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="25d-JN-CH4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F2K-4U-ik5" secondAttribute="trailing" constant="59" id="4uW-E6-w79"/>
+                            <constraint firstItem="07U-ED-IdF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="295" id="6oJ-UF-tBG"/>
+                            <constraint firstItem="ugG-fN-3a9" firstAttribute="top" secondItem="4MM-tc-24e" secondAttribute="bottom" constant="19" id="7Xn-ZN-Kwc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ao7-Ku-lcx" secondAttribute="trailing" constant="59" id="LRA-QM-RgA"/>
+                            <constraint firstItem="4MM-tc-24e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="NZU-Kn-HQV"/>
+                            <constraint firstItem="F2K-4U-ik5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="QDO-7W-ZgR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="07U-ED-IdF" secondAttribute="trailing" constant="59" id="QiJ-mW-axU"/>
+                            <constraint firstItem="ugG-fN-3a9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="129" id="R69-11-z2q"/>
+                            <constraint firstItem="ao7-Ku-lcx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="YKo-Fz-CZS"/>
+                            <constraint firstItem="F2K-4U-ik5" firstAttribute="top" secondItem="ao7-Ku-lcx" secondAttribute="bottom" constant="24" id="es2-xt-csi"/>
+                            <constraint firstItem="4MM-tc-24e" firstAttribute="top" secondItem="F2K-4U-ik5" secondAttribute="bottom" constant="19" id="g7g-Ji-6SS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ugG-fN-3a9" secondAttribute="trailing" constant="128" id="hvx-eu-WLi"/>
+                            <constraint firstItem="ao7-Ku-lcx" firstAttribute="top" secondItem="07U-ED-IdF" secondAttribute="bottom" constant="27" id="qKl-ve-YTO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4MM-tc-24e" secondAttribute="trailing" constant="59" id="w4O-lG-lQf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="birthdayTextField" destination="4MM-tc-24e" id="ocj-5d-jGw"/>
                         <outlet property="btnConfirm" destination="ugG-fN-3a9" id="BzR-mr-NWl"/>
                         <outlet property="emailTextField" destination="07U-ED-IdF" id="VEY-Ho-CUi"/>
+                        <outlet property="nameTextField" destination="F2K-4U-ik5" id="zQ7-wA-UJB"/>
                         <outlet property="passwordTextField" destination="ao7-Ku-lcx" id="zSn-gE-QCE"/>
                     </connections>
                 </viewController>
@@ -47,29 +73,5 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
         </scene>
-        <!--Teste-->
-        <scene sceneID="lgF-Ya-EnV">
-            <objects>
-                <viewController storyboardIdentifier="teste" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OQu-Ox-xxa" customClass="teste" customModule="starwars_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7Ux-IH-NL7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="d1e336c3a4728d0fb5abf22ffd96f6a7" translatesAutoresizingMaskIntoConstraints="NO" id="XVC-wr-N1h">
-                                <rect key="frame" x="-63" y="-28" width="540" height="924"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="kEU-fk-etf"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eNE-mn-wLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="910" y="86"/>
-        </scene>
     </scenes>
-    <resources>
-        <image name="d1e336c3a4728d0fb5abf22ffd96f6a7" width="540" height="924"/>
-    </resources>
 </document>

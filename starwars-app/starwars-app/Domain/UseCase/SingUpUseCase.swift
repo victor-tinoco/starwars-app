@@ -18,11 +18,11 @@ class SignUpUseCase {
         self.signUpImpl = signUpImpl
     }
     
-    func registerUser(email: String, password:String) -> Single<Bool> {
+    func registerUser(email: String, password:String) -> Single<String> {
        return signUpImpl.registerUser(email: email, password: password)
     }
     
-    func sendData(name: String, birthday: String, email: String, password: String) -> Single<Bool> {
-        return signUpImpl.sendData(name: name, birthday: birthday, email: email, password: password)
+    func sendData(name: String, birthday: String, email: String, password: String, uid: String) -> Single<Bool> {
+        return signUpImpl.sendData(name: name, birthday: birthday, email: email, password: password, uid: uid)
     }
 }

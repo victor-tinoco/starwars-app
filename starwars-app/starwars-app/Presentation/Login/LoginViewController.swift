@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     
     var delegate: LoginViewControllerDelegate?
     var viewModel: LoginViewModelContract!
+    let appDI = AppDIContainer()
     var dispose = DisposeBag()
     
     
@@ -49,6 +50,10 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func signUpScreen(_ sender: Any) {
+        let vc = appDI.makeSignUpViewController()
+        self.present(vc, animated: true, completion: nil)
+    }
     func bind() {
         
         self.viewModel.loginResponse.drive(onNext: { (login) in
@@ -60,9 +65,7 @@ class LoginViewController: UIViewController {
             }else{
                 print("erro")
             }
-            
         }).disposed(by: dispose)
-        
     }
     
 }
