@@ -10,13 +10,14 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-
 class SignUpViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var birthdayTextField: UITextField!
+    @IBOutlet weak var emailBorder: UITextField!
+    @IBOutlet weak var nameBorder: UITextField!
+    @IBOutlet weak var birthdayBorder: UITextField!
     
     @IBOutlet weak var btnConfirm: UIButton!
     var viewModel: SignUpContract!
@@ -26,6 +27,9 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
+        emailBorder.layer.borderColor = (UIColor(named: "borderColor") as! CGColor)
+        nameBorder.layer.borderColor = (UIColor(named: "borderColor") as! CGColor)
+        birthdayBorder.layer.borderColor = (UIColor(named: "borderColor") as! CGColor)
     }
     
     static func instantiate(viewModel: SignUpContract) -> SignUpViewController {
@@ -37,17 +41,17 @@ class SignUpViewController: UIViewController {
     
     func bind() {
         btnConfirm.rx.tap.bind {
-            if let email = self.emailTextField.text, let password = self.passwordTextField.text, let name = self.nameTextField.text, let birthday = self.birthdayTextField.text {
-                self.viewModel.makeRegister(email: email, password: password)
-                
-                
+            if let email = self.emailTextField.text, let name = self.nameTextField.text, let birthday = self.birthdayTextField.text {
+                    
+//                let teste = Teste(name:name,birth:birth,email:email)
+//                route.instantiate(struct:teste)
             }
         }.disposed(by: disposedBag)
         
         self.viewModel.finishRegister.drive(onNext: { (register) in
             if (register != nil) {
-                if let email = self.emailTextField.text, let password = self.passwordTextField.text, let name = self.nameTextField.text, let birthday = self.birthdayTextField.text{
-                    self.viewModel.makeRegisterStore(name: name, birthday: birthday, email: email, password: password, uid: register!)
+                if let email = self.emailTextField.text, let name = self.nameTextField.text, let birthday = self.birthdayTextField.text {
+                    self.viewModel.makeRegister(name: name, birthday: birthday, email: email, password: password)
                 }
             }else {
                 //mostrar erro de cadastro

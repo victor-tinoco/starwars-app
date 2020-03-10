@@ -16,57 +16,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="07U-ED-IdF">
-                                <rect key="frame" x="79" y="339" width="276" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ao7-Ku-lcx">
-                                <rect key="frame" x="79" y="400" width="276" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugG-fN-3a9">
-                                <rect key="frame" x="129" y="564" width="157" height="54"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="Gop-6b-15a">
+                                <rect key="frame" x="52" y="336" width="310" height="224"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="07U-ED-IdF">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="BWv-XU-xMH"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F2K-4U-ik5">
+                                        <rect key="frame" x="0.0" y="87" width="310" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="v17-PR-J5c"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Data de Nascimento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4MM-tc-24e">
+                                        <rect key="frame" x="0.0" y="174" width="310" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="jun-o2-XCE"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugG-fN-3a9">
+                                <rect key="frame" x="124.66666666666669" y="748" width="165" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="XiM-41-TTJ"/>
+                                    <constraint firstAttribute="width" constant="165" id="eFX-cG-3de"/>
+                                </constraints>
                                 <state key="normal" title="Confirmar"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F2K-4U-ik5">
-                                <rect key="frame" x="79" y="458" width="276" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Data de Nascimento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4MM-tc-24e">
-                                <rect key="frame" x="79" y="511" width="276" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvl-AO-EEq">
+                                <rect key="frame" x="52" y="173" width="310" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">INFORME SEUS DADOS PARA CADASTRAR
+
+</string>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="07U-ED-IdF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="25d-JN-CH4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F2K-4U-ik5" secondAttribute="trailing" constant="59" id="4uW-E6-w79"/>
-                            <constraint firstItem="07U-ED-IdF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="295" id="6oJ-UF-tBG"/>
-                            <constraint firstItem="ugG-fN-3a9" firstAttribute="top" secondItem="4MM-tc-24e" secondAttribute="bottom" constant="19" id="7Xn-ZN-Kwc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ao7-Ku-lcx" secondAttribute="trailing" constant="59" id="LRA-QM-RgA"/>
-                            <constraint firstItem="4MM-tc-24e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="NZU-Kn-HQV"/>
-                            <constraint firstItem="F2K-4U-ik5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="QDO-7W-ZgR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="07U-ED-IdF" secondAttribute="trailing" constant="59" id="QiJ-mW-axU"/>
-                            <constraint firstItem="ugG-fN-3a9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="129" id="R69-11-z2q"/>
-                            <constraint firstItem="ao7-Ku-lcx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="YKo-Fz-CZS"/>
-                            <constraint firstItem="F2K-4U-ik5" firstAttribute="top" secondItem="ao7-Ku-lcx" secondAttribute="bottom" constant="24" id="es2-xt-csi"/>
-                            <constraint firstItem="4MM-tc-24e" firstAttribute="top" secondItem="F2K-4U-ik5" secondAttribute="bottom" constant="19" id="g7g-Ji-6SS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ugG-fN-3a9" secondAttribute="trailing" constant="128" id="hvx-eu-WLi"/>
-                            <constraint firstItem="ao7-Ku-lcx" firstAttribute="top" secondItem="07U-ED-IdF" secondAttribute="bottom" constant="27" id="qKl-ve-YTO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4MM-tc-24e" secondAttribute="trailing" constant="59" id="w4O-lG-lQf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ugG-fN-3a9" secondAttribute="bottom" constant="70" id="0fd-IA-uKo"/>
+                            <constraint firstItem="Gop-6b-15a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9MU-XX-1Ei"/>
+                            <constraint firstItem="Gop-6b-15a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="XK1-GQ-KU6"/>
+                            <constraint firstItem="ugG-fN-3a9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oqk-GA-E8e"/>
+                            <constraint firstItem="Gop-6b-15a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yMU-Og-VyS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="birthdayBorder" destination="4MM-tc-24e" id="BhM-rU-o41"/>
                         <outlet property="birthdayTextField" destination="4MM-tc-24e" id="ocj-5d-jGw"/>
                         <outlet property="btnConfirm" destination="ugG-fN-3a9" id="BzR-mr-NWl"/>
+                        <outlet property="emailBorder" destination="07U-ED-IdF" id="6Q0-PZ-ahg"/>
                         <outlet property="emailTextField" destination="07U-ED-IdF" id="VEY-Ho-CUi"/>
+                        <outlet property="nameBorder" destination="F2K-4U-ik5" id="QPK-PG-wyD"/>
                         <outlet property="nameTextField" destination="F2K-4U-ik5" id="zQ7-wA-UJB"/>
-                        <outlet property="passwordTextField" destination="ao7-Ku-lcx" id="zSn-gE-QCE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

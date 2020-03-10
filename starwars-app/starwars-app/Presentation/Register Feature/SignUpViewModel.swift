@@ -39,13 +39,14 @@ class SignUpViewModel: SignUpContract {
     
     func makeRegister(name: String, birthday: String, email: String, password: String) {
         registerUseCase.registerUser(email: email, password: password).subscribe(onSuccess: { (userID) in
-            self.makeRegisterStore(name: <#T##String#>, birthday: <#T##String#>, email: <#T##String#>, password: <#T##String#>, uid: <#T##String#>)
+            self.registerRelay.accept(userID)
             }).disposed(by: disposeBag)
-    }
     
-    private func makeRegisterStore(name: String, birthday: String, email: String, password: String, uid: String){
+    func makeRegisterStore(name: String, birthday: String, email: String, password: String, uid: String){
         registerUseCase.sendData(name: name, birthday: birthday, email: email, password: password, uid: uid).subscribe(onSuccess: { (register) in
             self.storeRegisterRelay.accept(register)
         }).disposed(by: disposeBag)
     }
+}
+
 }
