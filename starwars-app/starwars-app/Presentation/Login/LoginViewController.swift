@@ -24,10 +24,39 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let myColor = UIColor.white
+        loginButton.layer.borderColor = myColor.cgColor
+
+        loginButton.layer.borderWidth = 1.0
+       
+        
+        emailTextField.layer.masksToBounds = false
+        emailTextField.layer.shadowRadius = 3.0
+        emailTextField.layer.shadowColor = UIColor.black.cgColor
+        emailTextField.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
+        emailTextField.layer.shadowOpacity = 1.0
+        
+        passwordTextField.layer.masksToBounds = false
+        passwordTextField.layer.shadowRadius = 3.0
+        passwordTextField.layer.shadowColor = UIColor.black.cgColor
+        passwordTextField.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
+        passwordTextField.layer.shadowOpacity = 1.0
+        
+        loginButton.layer.borderColor = (UIColor(named: "yellowbutton")?.cgColor as! CGColor)
+        loginButton.layer.cornerRadius = 21
+        
+        emailTextField.attributedPlaceholder = NSAttributedString(string:"E-MAIL", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "placeholder")])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string:"SENHA", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "placeholder")])
+//        passwordTextField.layer.shadowPath.
+        
+        
          bind()
         
         
     }
+    
+    
     
     public class func create(delegate: LoginViewControllerDelegate, viewModel: LoginViewModel) -> LoginViewController {
         
