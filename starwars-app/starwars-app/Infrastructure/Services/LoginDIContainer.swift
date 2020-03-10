@@ -9,7 +9,7 @@
 import UIKit
 
 
-class LoginDIContainer{
+class LoginDIContainer {
     
     
     

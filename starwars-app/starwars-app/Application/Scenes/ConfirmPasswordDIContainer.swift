@@ -9,6 +9,11 @@
 import Foundation
 
 
-class confirmPasswordDIContainer {
+class ConfirmPasswordDIContainer: ConfirmPassRoutes {
+    
+    func makeHomeViewController() {
+        
+    }
+    
     
 }

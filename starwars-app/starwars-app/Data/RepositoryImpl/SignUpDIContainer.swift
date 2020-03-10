@@ -8,12 +8,20 @@
 
 import UIKit
 
-class SignUpDIContainer:SignupRoutes{
+class SignUpDIContainer:SignupRoutes {
     
-   
-    func makeHomeViewController() {
-        
+
+    
+    let vm: ConfirmPasswordViewModel {
+        return ConfirmPasswordViewModel(userModel:   )
     }
+    
+    func makeConfirmPassViewController() -> ConfirmPasswordViewController {
+        return ConfirmPasswordViewController.instantiate(viewModel: <#T##ConfirmPasswordViewModel#>)
+    }
+    
+    
+
     
     
     

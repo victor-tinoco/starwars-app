@@ -43,8 +43,8 @@ class SignUpViewController: UIViewController {
         btnConfirm.rx.tap.bind {
             if let email = self.emailTextField.text, let name = self.nameTextField.text, let birthday = self.birthdayTextField.text {
                     
-//                let teste = Teste(name:name,birth:birth,email:email)
-//                route.instantiate(struct:teste)
+                let userModel = FirstRegister(name: name, birthday: birthday, email: email)
+                
             }
         }.disposed(by: disposedBag)
         
@@ -61,5 +61,5 @@ class SignUpViewController: UIViewController {
     
 }
 protocol SignupRoutes {
-    func makeHomeViewController()
+    func makeConfirmPassViewController()
 }

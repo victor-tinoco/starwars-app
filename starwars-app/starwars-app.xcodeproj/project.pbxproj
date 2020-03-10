@@ -11,10 +11,10 @@
 		5F19291E24168A0A001E3D61 /* LoginDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F19291D24168A0A001E3D61 /* LoginDIContainer.swift */; };
 		5F1929212416D41D001E3D61 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1929202416D41D001E3D61 /* SignUpModel.swift */; };
 		5F21862B241803B400923B73 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21862A241803B400923B73 /* User.swift */; };
-		5F21862D241804BE00923B73 /* confirmPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21862C241804BE00923B73 /* confirmPasswordViewController.swift */; };
-		5F21862F2418050D00923B73 /* confirmPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21862E2418050D00923B73 /* confirmPasswordViewModel.swift */; };
-		5F2186312418055100923B73 /* confirmPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F2186302418055100923B73 /* confirmPassword.storyboard */; };
-		5F21863424180BEB00923B73 /* confirmPasswordDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21863324180BEB00923B73 /* confirmPasswordDIContainer.swift */; };
+		5F21862D241804BE00923B73 /* ConfirmPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21862C241804BE00923B73 /* ConfirmPasswordViewController.swift */; };
+		5F21862F2418050D00923B73 /* ConfirmPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21862E2418050D00923B73 /* ConfirmPasswordViewModel.swift */; };
+		5F2186312418055100923B73 /* ConfirmPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F2186302418055100923B73 /* ConfirmPassword.storyboard */; };
+		5F21863424180BEB00923B73 /* ConfirmPasswordDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F21863324180BEB00923B73 /* ConfirmPasswordDIContainer.swift */; };
 		5F25AB982411419200F9ED08 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25AB972411419200F9ED08 /* SignUpService.swift */; };
 		5F25AB9A24115D8800F9ED08 /* SingUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25AB9924115D8800F9ED08 /* SingUpRepository.swift */; };
 		5F25AB9C24115E2500F9ED08 /* SignUpRepositorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25AB9B24115E2500F9ED08 /* SignUpRepositorImpl.swift */; };
@@ -50,10 +50,10 @@
 		5F19291D24168A0A001E3D61 /* LoginDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginDIContainer.swift; path = "starwars-app/Infrastructure/Services/LoginDIContainer.swift"; sourceTree = SOURCE_ROOT; };
 		5F1929202416D41D001E3D61 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		5F21862A241803B400923B73 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		5F21862C241804BE00923B73 /* confirmPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = confirmPasswordViewController.swift; path = "starwars-app/Domain/Entities/confirmPasswordViewController.swift"; sourceTree = SOURCE_ROOT; };
-		5F21862E2418050D00923B73 /* confirmPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = confirmPasswordViewModel.swift; path = "starwars-app/Domain/Entities/confirmPasswordViewModel.swift"; sourceTree = SOURCE_ROOT; };
-		5F2186302418055100923B73 /* confirmPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = confirmPassword.storyboard; path = "starwars-app/Domain/Entities/confirmPassword.storyboard"; sourceTree = SOURCE_ROOT; };
-		5F21863324180BEB00923B73 /* confirmPasswordDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmPasswordDIContainer.swift; sourceTree = "<group>"; };
+		5F21862C241804BE00923B73 /* ConfirmPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfirmPasswordViewController.swift; path = "starwars-app/Domain/Entities/ConfirmPasswordViewController.swift"; sourceTree = SOURCE_ROOT; };
+		5F21862E2418050D00923B73 /* ConfirmPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfirmPasswordViewModel.swift; path = "starwars-app/Domain/Entities/ConfirmPasswordViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		5F2186302418055100923B73 /* ConfirmPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ConfirmPassword.storyboard; path = "starwars-app/Domain/Entities/ConfirmPassword.storyboard"; sourceTree = SOURCE_ROOT; };
+		5F21863324180BEB00923B73 /* ConfirmPasswordDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordDIContainer.swift; sourceTree = "<group>"; };
 		5F25AB972411419200F9ED08 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
 		5F25AB9924115D8800F9ED08 /* SingUpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingUpRepository.swift; path = "starwars-app/Domain/Repositories/SingUpRepository.swift"; sourceTree = SOURCE_ROOT; };
 		5F25AB9B24115E2500F9ED08 /* SignUpRepositorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpRepositorImpl.swift; path = "starwars-app/Data/RepositoryImpl/SignUpRepositorImpl.swift"; sourceTree = SOURCE_ROOT; };
@@ -116,9 +116,9 @@
 				5FB78EE82412DA6A00893E56 /* SignUp.storyboard */,
 				5FB78EE92412DA6A00893E56 /* SignUpViewController.swift */,
 				5FB78EE72412DA6A00893E56 /* SignUpViewModel.swift */,
-				5F21862C241804BE00923B73 /* confirmPasswordViewController.swift */,
-				5F21862E2418050D00923B73 /* confirmPasswordViewModel.swift */,
-				5F2186302418055100923B73 /* confirmPassword.storyboard */,
+				5F21862C241804BE00923B73 /* ConfirmPasswordViewController.swift */,
+				5F21862E2418050D00923B73 /* ConfirmPasswordViewModel.swift */,
+				5F2186302418055100923B73 /* ConfirmPassword.storyboard */,
 			);
 			path = RegisterFeature;
 			sourceTree = "<group>";
@@ -265,7 +265,7 @@
 			children = (
 				5FEE48FA24116D9D004C6CF0 /* SignUpDIContainer.swift */,
 				5F19291D24168A0A001E3D61 /* LoginDIContainer.swift */,
-				5F21863324180BEB00923B73 /* confirmPasswordDIContainer.swift */,
+				5F21863324180BEB00923B73 /* ConfirmPasswordDIContainer.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -409,7 +409,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F2186312418055100923B73 /* confirmPassword.storyboard in Resources */,
+				5F2186312418055100923B73 /* ConfirmPassword.storyboard in Resources */,
 				786EBCF82410208B00683FD6 /* LaunchScreen.storyboard in Resources */,
 				786EBCF52410208B00683FD6 /* Assets.xcassets in Resources */,
 				5FB78EEB2412DA6A00893E56 /* SignUp.storyboard in Resources */,
@@ -471,14 +471,14 @@
 				5F21862B241803B400923B73 /* User.swift in Sources */,
 				78D9E32924102B2000C7C8B5 /* BaseAPIResponse.swift in Sources */,
 				78D9E325241027F300C7C8B5 /* AppDIContainer.swift in Sources */,
-				5F21862D241804BE00923B73 /* confirmPasswordViewController.swift in Sources */,
+				5F21862D241804BE00923B73 /* ConfirmPasswordViewController.swift in Sources */,
 				5F19291E24168A0A001E3D61 /* LoginDIContainer.swift in Sources */,
 				7817021824113DC400CC9777 /* PeopleDetailsViewController.swift in Sources */,
 				5F25AB9A24115D8800F9ED08 /* SingUpRepository.swift in Sources */,
 				5FB78EEC2412DA6A00893E56 /* SignUpViewController.swift in Sources */,
 				78D9E32B24102B3900C7C8B5 /* PeopleAPIResponse.swift in Sources */,
 				7817021D2411409400CC9777 /* UIViewController.swift in Sources */,
-				5F21862F2418050D00923B73 /* confirmPasswordViewModel.swift in Sources */,
+				5F21862F2418050D00923B73 /* ConfirmPasswordViewModel.swift in Sources */,
 				6A366B982411652C00B86105 /* StarWarsViewController.swift in Sources */,
 				786EBCF02410208900683FD6 /* ViewController.swift in Sources */,
 				6A366B9024113AA200B86105 /* LoginRepositoryImpl.swift in Sources */,
@@ -489,7 +489,7 @@
 				6A366B8A24112ED500B86105 /* LoginViewController.swift in Sources */,
 				6A366B962411416D00B86105 /* LoginViewModel.swift in Sources */,
 				786EBCEC2410208900683FD6 /* AppDelegate.swift in Sources */,
-				5F21863424180BEB00923B73 /* confirmPasswordDIContainer.swift in Sources */,
+				5F21863424180BEB00923B73 /* ConfirmPasswordDIContainer.swift in Sources */,
 				7817021A24113DD500CC9777 /* PeopleDetailsViewModel.swift in Sources */,
 				78D9E32D24102B4800C7C8B5 /* People.swift in Sources */,
 				6A366B9224113DD200B86105 /* LoginUseCase.swift in Sources */,

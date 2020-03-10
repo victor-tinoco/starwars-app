@@ -21,3 +21,16 @@ struct RegisterCombo {
         self.birthday = birthday
     }
 }
+
+
+struct FirstRegister {
+    let name: String
+    let email: String
+    let birthday: String
+    
+    init(name:String, birthday: String, email:String){
+        self.name = name
+        self.birthday = birthday
+        self.email = email
+    }
+}

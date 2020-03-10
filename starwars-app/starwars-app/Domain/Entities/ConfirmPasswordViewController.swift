@@ -16,9 +16,14 @@ class ConfirmPasswordViewController: UIViewController {
    
     
     static func instantiate(viewModel: ConfirmPasswordViewModel) -> ConfirmPasswordViewController {
-        let storyboard = UIStoryboard(name: "confirmPassword", bundle: nil)
+        let storyboard = UIStoryboard(name: "ConfirmPassword", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "ConfirmPasswordViewController") as! ConfirmPasswordViewController
         return view
     }
+    
+}
+
+protocol ConfirmPassRoutes {
+    func makeHomeViewController()
     
 }
