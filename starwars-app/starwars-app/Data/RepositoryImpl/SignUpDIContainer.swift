@@ -10,7 +10,7 @@ import UIKit
 
 class SignUpDIContainer:SignupRoutes {
     
-    func makeConfirmPassViewController(userModel: RegisterCombo) -> SignUpViewController {
-        return SignUpViewController.instantiate(viewModel: <#T##SignUpContract#>, routes: <#T##SignupRoutes#>)
+    func makeConfirmPassViewController(vm: SignUpViewModel) -> SignUpViewController {
+        return SignUpViewController.instantiate(viewModel: vm)
     }
 }

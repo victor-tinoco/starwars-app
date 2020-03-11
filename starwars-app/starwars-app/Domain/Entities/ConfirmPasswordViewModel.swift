@@ -10,9 +10,9 @@ import Foundation
 
 class ConfirmPasswordViewModel {
     
-    let userModel: RegisterCombo
+    let firstRegister: FirstRegister
     
-    init(userModel: RegisterCombo) { 
-        self.userModel = userModel
+    init(firstRegister: FirstRegister) {
+        self.firstRegister = firstRegister
     }
 }

@@ -24,21 +24,19 @@ class SignUpViewController: UIViewController {
     var viewModel: SignUpContract!
     let disposedBag = DisposeBag()
     let appDI = AppDIContainer()
-    var routes: SignupRoutes
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
-        emailBorder.layer.borderColor = (UIColor(named: "borderColor") as! CGColor)
-        nameBorder.layer.borderColor = (UIColor(named: "borderColor") as! CGColor)
-        birthdayBorder.layer.borderColor = (UIColor(named: "borderColor") as! CGColor)
+        emailBorder.layer.borderColor = UIColor(red: 112, green: 112, blue: 112, alpha: 0).cgColor
+        nameBorder.layer.borderColor = UIColor(named: "borderColor")?.cgColor
+        birthdayBorder.layer.borderColor = UIColor(named: "borderColor")?.cgColor
     }
     
-    static func instantiate(viewModel: SignUpContract, routes: SignupRoutes) -> SignUpViewController {
+    static func instantiate(viewModel: SignUpContract) -> SignUpViewController {
         let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
         view.viewModel = viewModel
-        view.routes = routes
         return view
     }
     
@@ -46,12 +44,16 @@ class SignUpViewController: UIViewController {
         btnConfirm.rx.tap.bind {
             if let email = self.emailTextField.text, let name = self.nameTextField.text, let birthday = self.birthdayTextField.text {
                 
-                let userModel = FirstRegister(name: name, birthday: birthday, email: email)
+                let firstRegister = FirstRegister(name: name, birthday: birthday, email: email)
+                let vc = self.appDI.makeConfirmPassViewController(firstRegister:firstRegister)
+                
+                self.present(vc, animated: true, completion: nil)
+                
                 
             }
         }.disposed(by: disposedBag)
     }    
 }
 protocol SignupRoutes {
-    func makeConfirmPassViewController(userModel: RegisterCombo) -> ConfirmPasswordViewController
+    func makeConfirmPassViewController(vm: SignUpViewModel) -> SignUpViewController
 }

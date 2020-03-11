@@ -49,6 +49,7 @@ class LoginViewController: UIViewController {
         let vc = appDI.makeSignUpViewController()
         self.present(vc, animated: true, completion: nil)
     }
+    
     func bind() {
         
         self.viewModel.loginResponse.drive(onNext: { (login) in
