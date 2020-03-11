@@ -10,7 +10,11 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class PeopleListViewModel {
+protocol PeopleListViewModelContract {
+    var peopleList: Driver<[People]> { get }
+}
+
+class PeopleListViewModel: PeopleListViewModelContract {
     private var peopleListRelay: BehaviorRelay<[People]> = BehaviorRelay(value: [])
     
     var peopleList: Driver<[People]> { peopleListRelay.asDriver() }

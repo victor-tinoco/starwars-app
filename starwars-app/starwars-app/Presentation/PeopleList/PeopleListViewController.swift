@@ -13,7 +13,7 @@ import RxCocoa
 class PeopleListViewController: UIViewController {
     @IBOutlet weak var peopleTableView: UITableView!
     
-    var viewModel: PeopleListViewModel!
+    var viewModel: PeopleListViewModelContract!
     var disposeBag = DisposeBag()
     
     public class func instantiate(viewModel: PeopleListViewModel) -> PeopleListViewController {
