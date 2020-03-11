@@ -105,6 +105,11 @@
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eeb-Iz-Xqa"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYP-Ub-mJB">
+                                <rect key="frame" x="68" y="273" width="240" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -133,6 +138,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="alertView" destination="fYP-Ub-mJB" id="0t8-BY-b5u"/>
                         <outlet property="emailTextField" destination="Gqm-Ba-0NK" id="p69-JW-Rq2"/>
                         <outlet property="eyeButton" destination="Sh4-8u-CAR" id="s7o-7T-aQR"/>
                         <outlet property="loginButton" destination="Y3b-gL-htB" id="ZaH-3S-6sC"/>

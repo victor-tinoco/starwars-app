@@ -13,9 +13,9 @@ import RxSwift
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var eyeButton: UIButton!
-    @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var alertView: UIView!
     
     @IBOutlet weak var loginButton: UIButton!
     
@@ -50,8 +50,19 @@ class LoginViewController: UIViewController {
         passwordTextField.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
         passwordTextField.layer.shadowOpacity = 1.0
         
+        alertView.layer.masksToBounds = false
+        alertView.layer.shadowRadius = 7.0
+        alertView.layer.shadowColor = UIColor.red.cgColor
+        alertView.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        alertView.layer.shadowOpacity = 5.0
+        alertView.layer.borderWidth = 2
+        alertView.layer.borderColor = (UIColor(named: "alert")?.cgColor )
+        alertView.layer.cornerRadius = 12
+        
         loginButton.layer.borderColor = (UIColor(named: "yellowbutton")?.cgColor as! CGColor)
         loginButton.layer.cornerRadius = 21
+        
+        
         
         emailTextField.attributedPlaceholder = NSAttributedString(string:"E-MAIL", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "placeholder")])
         passwordTextField.attributedPlaceholder = NSAttributedString(string:"SENHA", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "placeholder")])
@@ -77,6 +88,8 @@ class LoginViewController: UIViewController {
             }
         }.disposed(by: dispose)
     }
+    
+    
     
     
     public class func create(delegate: LoginViewControllerDelegate, viewModel: LoginViewModel) -> LoginViewController {

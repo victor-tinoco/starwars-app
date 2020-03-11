@@ -13,6 +13,8 @@ import RxCocoa
 
 class ResetPasswordViewController: UIViewController {
     
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     
     var viewModel: ResetPasswordViewModelContract!
@@ -20,7 +22,13 @@ class ResetPasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        close()
+      sendButton.layer.borderColor = (UIColor(named: "yellowbutton")?.cgColor as! CGColor)
+        sendButton.layer.cornerRadius = 21
         
+       emailTextField.attributedPlaceholder = NSAttributedString(string:"E-MAIL", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "placeholder")])
+       emailTextField.layer.borderColor = (UIColor(named: "alert")?.cgColor )
+
         bind()
     }
     
@@ -37,7 +45,6 @@ class ResetPasswordViewController: UIViewController {
             self.dismiss(animated: true, completion: nil)
         }
       
-        
     }
         func bind(){
             self.viewModel.resetResponse.drive(onNext: { (reset) in
@@ -50,5 +57,11 @@ class ResetPasswordViewController: UIViewController {
             }).disposed(by: dispose)
             
             
+    }
+    
+    func close() {
+             closeButton.rx.tap.bind {
+                 self.dismiss(animated: true, completion: nil)
+        }.disposed(by: dispose)
     }
 }
