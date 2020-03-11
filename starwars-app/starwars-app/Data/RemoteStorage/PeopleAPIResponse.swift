@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 struct PeopleAPIReponse: Codable {
     let name: String
     let height: String

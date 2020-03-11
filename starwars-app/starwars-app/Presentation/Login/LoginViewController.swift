@@ -57,6 +57,7 @@ class LoginViewController: UIViewController {
         passwordTextField.attributedPlaceholder = NSAttributedString(string:"SENHA", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "placeholder")])
 //        passwordTextField.layer.shadowPath.
          
+        
 
     }
     
@@ -65,12 +66,17 @@ class LoginViewController: UIViewController {
             if(self.iconClick == true) {
                 self.passwordTextField.isSecureTextEntry = false
                 self.iconClick = false
-                } else {
+                self.eyeButton.setImage(UIImage(named: "ic_visibility_off"), for: .normal)
+                
+            } else {
                 self.passwordTextField.isSecureTextEntry = true
                 self.iconClick = true
-                }
+                self.eyeButton.setImage(UIImage(named: "ic_visibility"), for: .normal)
+                
+                
+            }
         }.disposed(by: dispose)
-        }
+    }
     
     
     public class func create(delegate: LoginViewControllerDelegate, viewModel: LoginViewModel) -> LoginViewController {

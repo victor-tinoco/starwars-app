@@ -9,11 +9,13 @@
 import UIKit
 
 class AppDIContainer {
+ 
+    let signUpDI = SignUpDIContainer()
     
     var window: UIWindow?
         
         
-  public func makeHomeViewController() -> LoginViewController {
+  public func makeLoginViewController() -> LoginViewController {
     return LoginViewController.create(delegate: self, viewModel: LoginViewModel(usecase: LoginUseCase(loginRepository: LoginRepositoryImpl())))
             
         }
@@ -23,12 +25,20 @@ class AppDIContainer {
 extension AppDIContainer: LoginViewControllerDelegate {
     func didTouchButtonLogin() -> UIViewController {
         let loginRepository = LoginRepositoryImpl()
-        let usecase = LoginUseCase(loginRepository: loginRepository)
-        let vm = StarWarsViewController()
-        let vc = StarWarsViewController.instantiate()
+        let listRepo = PeopleListRepositoryImpl()
+        let usecase = PeopleListUseCase(peopleListRepo: listRepo)
+        let vm = ChooseSideViewModel(peopleListUseCase: usecase)
+        let rt = ChooseDIContainer()
+        let vc = ChooseSideViewController.instantiate(viewModel: vm, routes: rt)
         
         return vc
     }
     
     
+    func showChooseSideViewController() -> ChooseSideViewController {
+        return makeChooseSideDI.makeChooseSideViewController()
+    }
+    var makeChooseSideDI: ChooseDIContainer {
+        return ChooseDIContainer()
+    }
 }
