@@ -12,7 +12,7 @@ class ConfirmPasswordViewModel {
     
     let userModel: RegisterCombo
     
-    init(userModel: RegisterCombo){
+    init(userModel: RegisterCombo) { 
         self.userModel = userModel
     }
 }

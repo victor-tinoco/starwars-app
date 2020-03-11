@@ -10,22 +10,19 @@ import UIKit
 
 class StarWarsViewController: UIViewController {
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-
-     static func instantiate() -> StarWarsViewController {
-          let storyboard = UIStoryboard(name: "LoginViewController", bundle: nil)
-          let view = storyboard.instantiateViewController(withIdentifier: "StarWarsViewController") as! StarWarsViewController
-         
-          
-          return view
-      }
-
+    
+    static func instantiate() -> StarWarsViewController {
+        let storyboard = UIStoryboard(name: "LoginViewController", bundle: nil)
+        let view = storyboard.instantiateViewController(withIdentifier: "StarWarsViewController") as! StarWarsViewController
+        return view
+    }
 }
 
   

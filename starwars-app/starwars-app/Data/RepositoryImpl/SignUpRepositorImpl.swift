@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 class SignUpRepositorImpl: SignUpRepository {
-  
+    
     
     
     let signUpService = SignUpService()
@@ -21,7 +21,5 @@ class SignUpRepositorImpl: SignUpRepository {
     
     func sendData(name: String, birthday: String, email: String, password: String, uid: String) -> Single<Bool> {
         signUpService.sendData(name: name, birthday: birthday, email: email, password: password, uid: uid )
-      }
-    
-    
+    }
 }

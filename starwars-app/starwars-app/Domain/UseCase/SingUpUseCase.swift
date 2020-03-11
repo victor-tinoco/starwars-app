@@ -19,7 +19,7 @@ class SignUpUseCase {
     }
     
     func registerUser(email: String, password:String) -> Single<String> {
-       return signUpImpl.registerUser(email: email, password: password)
+        return signUpImpl.registerUser(email: email, password: password)
     }
     
     func sendData(name: String, birthday: String, email: String, password: String, uid: String) -> Single<Bool> {

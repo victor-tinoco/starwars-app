@@ -14,7 +14,6 @@ import RxSwift
 class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var loginButton: UIButton!
     
     var delegate: LoginViewControllerDelegate?
@@ -25,9 +24,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         bind()
-        
-        
+        bind()
     }
     
     public class func create(delegate: LoginViewControllerDelegate, viewModel: LoginViewModel) -> LoginViewController {
@@ -37,7 +34,6 @@ class LoginViewController: UIViewController {
         view.delegate = delegate
         view.viewModel = viewModel
         return view
-        
     }
     
     
@@ -47,7 +43,6 @@ class LoginViewController: UIViewController {
             
             self.viewModel.goLogin(email: email, password: password)
         }
-        
     }
     
     @IBAction func signUpScreen(_ sender: Any) {
@@ -67,12 +62,11 @@ class LoginViewController: UIViewController {
             }
         }).disposed(by: dispose)
     }
-    
 }
 
 protocol LoginViewControllerDelegate {
     func didTouchButtonLogin() -> UIViewController
 }
 
- 
+
 

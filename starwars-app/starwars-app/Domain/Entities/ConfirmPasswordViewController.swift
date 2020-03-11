@@ -13,14 +13,11 @@ class ConfirmPasswordViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
-   
-    
     static func instantiate(viewModel: ConfirmPasswordViewModel) -> ConfirmPasswordViewController {
         let storyboard = UIStoryboard(name: "ConfirmPassword", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "ConfirmPasswordViewController") as! ConfirmPasswordViewController
         return view
     }
-    
 }
 
 protocol ConfirmPassRoutes {

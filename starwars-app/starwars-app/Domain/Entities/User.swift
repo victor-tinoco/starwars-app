@@ -28,7 +28,7 @@ struct FirstRegister {
     let email: String
     let birthday: String
     
-    init(name:String, birthday: String, email:String){
+    init(name:String, birthday: String, email:String) { 
         self.name = name
         self.birthday = birthday
         self.email = email

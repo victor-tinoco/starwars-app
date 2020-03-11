@@ -24,7 +24,6 @@ class SignUpViewModel: SignUpContract {
     var storeRegister: Driver<Bool?> {return storeRegisterRelay.asDriver()}
     let disposeBag = DisposeBag()
     
-    
     init(registerUseCase: SignUpUseCase) {
         self.registerUseCase = registerUseCase
         
@@ -40,13 +39,13 @@ class SignUpViewModel: SignUpContract {
     func makeRegister(name: String, birthday: String, email: String, password: String) {
         registerUseCase.registerUser(email: email, password: password).subscribe(onSuccess: { (userID) in
             self.registerRelay.accept(userID)
-            }).disposed(by: disposeBag)
-    
-    func makeRegisterStore(name: String, birthday: String, email: String, password: String, uid: String){
-        registerUseCase.sendData(name: name, birthday: birthday, email: email, password: password, uid: uid).subscribe(onSuccess: { (register) in
-            self.storeRegisterRelay.accept(register)
         }).disposed(by: disposeBag)
+        
+        func makeRegisterStore(name: String, birthday: String, email: String, password: String, uid: String) {
+            registerUseCase.sendData(name: name, birthday: birthday, email: email, password: password, uid: uid).subscribe(onSuccess: { (register) in
+                self.storeRegisterRelay.accept(register)
+            }).disposed(by: disposeBag)
+        }
     }
-}
-
+    
 }

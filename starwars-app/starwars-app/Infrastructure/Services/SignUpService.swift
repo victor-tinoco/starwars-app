@@ -18,7 +18,7 @@ class SignUpService {
     
     func registerUser(email:String, password:String) -> Single<String> {
         return Single.create { single in
-            Auth.auth().createUser(withEmail: email, password: password, completion:{ user, error in
+            Auth.auth().createUser(withEmail: email, password: password, completion: { user, error in
                 if error != nil {
                     single(.success(""))
                     print("Erro ao cadastrar")
@@ -36,7 +36,7 @@ class SignUpService {
         }
     }
     
-    func sendData(name: String, birthday:String, email:String, password:String, uid: String?) -> Single<Bool>{
+    func sendData(name: String, birthday:String, email:String, password:String, uid: String?) -> Single<Bool> {
         return Single.create { single in
             
             self.db.document("/users/\(uid!)/").setData([
@@ -49,12 +49,9 @@ class SignUpService {
                         print("Error adding document: \(err)")
                     } else {
                         single(.success(true))
-                       
                     }
             }
-            
             return Disposables.create()
         }
     }
-    
 }

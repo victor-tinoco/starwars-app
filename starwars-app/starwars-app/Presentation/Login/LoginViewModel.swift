@@ -21,23 +21,19 @@ public class LoginViewModel: LoginViewModelContract {
     
     private let loginRelay: BehaviorRelay<Bool?> =
         BehaviorRelay(value: nil)
-       public var loginResponse: Driver<Bool?>{ return
-           loginRelay.asDriver() }
+    public var loginResponse: Driver<Bool?> {return
+        loginRelay.asDriver() }
     
-    public func goLogin(email: String, password: String){
+    public func goLogin(email: String, password: String) {
         usecase.goLogin(email: email, password: password).subscribe(onSuccess: { login in
             self.loginRelay.accept(login)
-            }).disposed(by: disposeBag)
-        
-    
-     }
+        }).disposed(by: disposeBag)
+    }
     
     init(usecase: LoginUseCase) {
         self.usecase = usecase
-        
     }
-    
 }
 
-   
+
 

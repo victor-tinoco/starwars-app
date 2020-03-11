@@ -32,5 +32,4 @@ class PeopleDetailsViewController: UIViewController {
         vc._viewModel = viewModel
         return vc
     }
-
 }
