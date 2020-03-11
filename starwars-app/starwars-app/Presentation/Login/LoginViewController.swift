@@ -69,7 +69,7 @@ class LoginViewController: UIViewController {
                 self.passwordTextField.isSecureTextEntry = true
                 self.iconClick = true
                 }
-            }
+        }.disposed(by: dispose)
         }
     
     
