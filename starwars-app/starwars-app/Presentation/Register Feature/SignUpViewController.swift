@@ -20,6 +20,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var birthdayBorder: UITextField!
     
     @IBOutlet weak var btnConfirm: UIButton!
+    
     var viewModel: SignUpContract!
     let disposedBag = DisposeBag()
     let appDI = AppDIContainer()
