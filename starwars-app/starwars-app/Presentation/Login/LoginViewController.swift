@@ -12,6 +12,8 @@ import Firebase
 import RxSwift
 
 class LoginViewController: UIViewController {
+    @IBOutlet weak var eyeButton: UIButton!
+    @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -21,9 +23,14 @@ class LoginViewController: UIViewController {
     var viewModel: LoginViewModelContract!
     var dispose = DisposeBag()
     
+    var iconClick = true
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        eyePasswordButton()
+        bind()
 
         let myColor = UIColor.white
         loginButton.layer.borderColor = myColor.cgColor
@@ -49,13 +56,21 @@ class LoginViewController: UIViewController {
         emailTextField.attributedPlaceholder = NSAttributedString(string:"E-MAIL", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "placeholder")])
         passwordTextField.attributedPlaceholder = NSAttributedString(string:"SENHA", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "placeholder")])
 //        passwordTextField.layer.shadowPath.
-        
-        
-         bind()
-        
-        
+         
+
     }
     
+    func eyePasswordButton() {
+        eyeButton.rx.tap.bind {
+            if(self.iconClick == true) {
+                self.passwordTextField.isSecureTextEntry = false
+                self.iconClick = false
+                } else {
+                self.passwordTextField.isSecureTextEntry = true
+                self.iconClick = true
+                }
+            }
+        }
     
     
     public class func create(delegate: LoginViewControllerDelegate, viewModel: LoginViewModel) -> LoginViewController {
