@@ -54,15 +54,17 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugG-fN-3a9">
-                                <rect key="frame" x="124.66666666666669" y="748" width="165" height="44"/>
+                                <rect key="frame" x="124.66666666666669" y="722" width="165" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="XiM-41-TTJ"/>
                                     <constraint firstAttribute="width" constant="165" id="eFX-cG-3de"/>
                                 </constraints>
-                                <state key="normal" title="Confirmar"/>
+                                <state key="normal" title="CADASTRAR">
+                                    <color key="titleColor" red="0.91764705882352937" green="0.83529411764705885" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvl-AO-EEq">
-                                <rect key="frame" x="52" y="173" width="310" height="58"/>
+                                <rect key="frame" x="52" y="124" width="310" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">INFORME SEUS DADOS PARA CADASTRAR
 
@@ -74,7 +76,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ugG-fN-3a9" secondAttribute="bottom" constant="70" id="0fd-IA-uKo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ugG-fN-3a9" secondAttribute="bottom" constant="96" id="0fd-IA-uKo"/>
                             <constraint firstItem="Gop-6b-15a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9MU-XX-1Ei"/>
                             <constraint firstItem="Gop-6b-15a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="XK1-GQ-KU6"/>
                             <constraint firstItem="ugG-fN-3a9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oqk-GA-E8e"/>

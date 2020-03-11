@@ -20,15 +20,16 @@ class AppDIContainer {
     }
     
     func makeConfirmPassViewController(firstRegister: FirstRegister) -> ConfirmPasswordViewController {
-
-        let vm = ConfirmPasswordViewModel(firstRegister: firstRegister)
+        let repoImpl = SignUpRepositorImpl()
+        let useCase = SignUpUseCase(signUpImpl: repoImpl)
+        let vm = ConfirmPasswordViewModel(registerUseCase: useCase, firstRegister: firstRegister)
         return ConfirmPasswordViewController.instantiate(viewModel: vm)
     }
     
     func makeSignUpViewController() -> SignUpViewController {
         let signUpRepo = SignUpRepositorImpl()
         let signUpUseCase = SignUpUseCase(signUpImpl: signUpRepo)
-        let vm = SignUpViewModel(registerUseCase: signUpUseCase)
+        let vm = SignUpViewModel()
         return SignUpViewController.instantiate(viewModel: vm)
     }
 }
