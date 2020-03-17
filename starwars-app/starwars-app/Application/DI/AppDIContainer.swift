@@ -9,5 +9,10 @@
 import UIKit
 
 class AppDIContainer {
-    
+    func showChooseSideViewController() -> ChooseSideViewController {
+        return makeChooseSideDI.makeChooseSideViewController()
+    }
+    var makeChooseSideDI: ChooseDIContainer {
+        return ChooseDIContainer()
+    }
 }
